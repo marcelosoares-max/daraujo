@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blip Studio · Drogaria Araújo — Orquestração Multiagentes</title>
+<title>Blip Studio · Drogaria Araujo — Orquestração Multiagentes</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -291,6 +291,14 @@ section.in .rv:nth-child(5){transition-delay:.28s}
   .mock-pair{grid-template-columns:1fr !important;gap:40px !important}
 }
 
+/* dexpara overlay page */
+.dx-page{position:fixed;inset:0;z-index:9999;background:var(--bg);overflow-y:auto;overflow-x:hidden;display:none;opacity:0;transition:opacity .35s}
+.dx-page.open{display:block;opacity:1}
+.dx-page .wrap{max-width:1300px;margin:0 auto;padding:40px 5vw 100px}
+.dx-back{display:inline-flex;align-items:center;gap:8px;font-family:var(--font);font-size:13px;font-weight:600;color:var(--blip);cursor:pointer;margin-bottom:30px;padding:8px 16px;border-radius:10px;border:1px solid rgba(0,150,250,.25);background:rgba(0,150,250,.06);transition:all .25s}
+.dx-back:hover{background:rgba(0,150,250,.12);border-color:var(--blip)}
+.dx-back svg{width:16px;height:16px;stroke:var(--blip);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
 /* de x para table */
 .dx-tbl-wrap{margin-top:32px;border-radius:14px;border:1px solid var(--border);overflow:hidden;background:rgba(6,6,18,.6)}
 .dx-tbl{width:100%;border-collapse:collapse;font-size:12.5px;min-width:1000px}
@@ -382,7 +390,7 @@ footer b{color:var(--mute)}
   <div class="brand">
     <span class="dot" style="background:var(--araujo)"></span>
     <span class="dot" style="background:var(--blip);margin-left:-6px"></span>
-    Drogaria Araújo <span class="x">×</span> <span class="blip">Blip</span>
+    Drogaria Araujo <span class="x">×</span> <span class="blip">Blip</span>
   </div>
   <nav class="topnav">
     <a href="#hero">Início</a>
@@ -392,7 +400,7 @@ footer b{color:var(--mute)}
     <a href="#vantagens">Vantagens</a>
     <a href="#jornada">Jornada</a>
     <a href="#operacao">Brain</a>
-    <a href="#dexpara" style="background:rgba(226,0,26,.15);border:1px solid rgba(226,0,26,.4);border-radius:8px;padding:4px 12px;color:#ff6b6b">De × Para</a>
+    <a href="javascript:void(0)" onclick="document.getElementById('dxPage').classList.add('open');document.body.style.overflow='hidden'" style="background:rgba(226,0,26,.15);border:1px solid rgba(226,0,26,.4);border-radius:8px;padding:4px 12px;color:#ff6b6b">De × Para</a>
     <a href="#deps">Integrações</a>
   </nav>
 </div>
@@ -404,10 +412,10 @@ footer b{color:var(--mute)}
 <section id="hero">
   <div class="wrap">
     <div class="eyebrow rv">Proposta executiva · Blip Studio</div>
-    <h1 class="rv">Eleve a experiência da Araújo com o <span class="hl">Contato Inteligente</span> que <span class="hl-r">vende</span>.</h1>
-    <p class="hero-sub rv">O Blip Studio orquestra múltiplos agentes de IA no WhatsApp da Drogaria Araújo — cada um especialista em um escopo, trabalhando juntos para <b>potencializar vendas</b>, automatizar recorrência e oferecer a melhor experiência ao cliente.</p>
+    <h1 class="rv">Eleve a experiência da Araujo com o <span class="hl">Contato Inteligente</span> que <span class="hl-r">vende</span>.</h1>
+    <p class="hero-sub rv">O Blip Studio orquestra múltiplos agentes de IA no WhatsApp da Drogaria Araujo — cada um especialista em um escopo, trabalhando juntos para <b>potencializar vendas</b>, automatizar recorrência e oferecer a melhor experiência ao cliente.</p>
     <div class="meta rv">
-      <div><div class="lbl">Para</div><div class="val">Drogaria Araújo</div></div>
+      <div><div class="lbl">Para</div><div class="val">Drogaria Araujo</div></div>
       <div><div class="lbl">Foco</div><div class="val">Vendas & Conversão</div></div>
       <div><div class="lbl">Plataforma</div><div class="val">Blip Studio</div></div>
     </div>
@@ -419,7 +427,7 @@ footer b{color:var(--mute)}
   <div class="wrap">
     <div class="eyebrow rv">O que é o Blip Studio</div>
     <h1 class="rv" style="font-size:clamp(28px,4.5vw,56px);max-width:800px;margin-bottom:18px">A próxima evolução: o <span class="hl">Contato Inteligente</span> que vende</h1>
-    <p class="lead rv">O cliente da Araújo quer descrever o que precisa com as próprias palavras e comprar. O Studio com IA leva essa experiência a um novo patamar.</p>
+    <p class="lead rv">O cliente da Araujo quer descrever o que precisa com as próprias palavras e comprar. O Studio com IA leva essa experiência a um novo patamar.</p>
 
     <div class="evo rv">
       <div class="evo-track">
@@ -488,7 +496,7 @@ footer b{color:var(--mute)}
       <div class="evo-close">
         <div class="evo-close-row"><span class="ec-dot bl"></span><b>Agentes nas conversas:</b> jornadas de venda mais fluidas, naturais e capazes de converter o inesperado.</div>
         <div class="evo-close-row"><span class="ec-dot pr"></span><b>Determinístico nos sistemas:</b> controle total em estoque, Salesforce e pagamento.</div>
-        <p class="evo-close-note">Não é escolher entre um e outro. É saber onde cada um trabalha melhor — e essa é a arquitetura que propomos para a Drogaria Araújo.</p>
+        <p class="evo-close-note">Não é escolher entre um e outro. É saber onde cada um trabalha melhor — e essa é a arquitetura que propomos para a Drogaria Araujo.</p>
       </div>
     </div>
   </div>
@@ -499,7 +507,7 @@ footer b{color:var(--mute)}
   <div class="wrap">
     <div class="eyebrow rv">Como tudo se conecta</div>
     <h1 class="rv" style="font-size:clamp(26px,4vw,50px);max-width:800px;margin-bottom:14px">No centro, o <span class="hl">Blip Studio</span> orquestra tudo</h1>
-    <p class="lead rv">Os sistemas da Araújo entram de um lado. Os canais onde o cliente compra saem do outro. No meio, o Blip Studio roteia por intenção e distribui para os agentes certos.</p>
+    <p class="lead rv">Os sistemas da Araujo entram de um lado. Os canais onde o cliente compra saem do outro. No meio, o Blip Studio roteia por intenção e distribui para os agentes certos.</p>
 
     <div class="orch rv">
       <div class="orch-col left">
@@ -544,14 +552,14 @@ footer b{color:var(--mute)}
     </div>
     <div class="caps rv">
       <div class="cap"><span class="cnum">01</span><h4>Nova interface</h4><p>Blocos de IA intuitivos dentro do fluxo conversacional, acelerando a construção de jornadas de venda inteligentes.</p></div>
-      <div class="cap"><span class="cnum">02</span><h4>Personalização em larga escala</h4><p>Interações personalizadas com IA em tempo real, combinando histórico, contexto e preferências do cliente Araújo.</p></div>
+      <div class="cap"><span class="cnum">02</span><h4>Personalização em larga escala</h4><p>Interações personalizadas com IA em tempo real, combinando histórico, contexto e preferências do cliente Araujo.</p></div>
       <div class="cap"><span class="cnum">03</span><h4>Testes, logs e eventos</h4><p>Controle total com relatórios detalhados e insights em tempo real para otimizar cada conversão.</p></div>
       <div class="cap"><span class="cnum">04</span><h4>MCP <small>MODEL CONTEXT PROTOCOL</small></h4><p>A IA acessa Salesforce, estoque e APIs em tempo real, ampliando as possibilidades da jornada de venda.</p></div>
       <div class="cap"><span class="cnum">05</span><h4>Multiagentes <small>A2A</small></h4><p>Orquestração inteligente conectando múltiplos agentes de IA e humanos em uma comunicação fluida.</p></div>
       <div class="cap"><span class="cnum">06</span><h4>High code</h4><p>Repositório de códigos conectado direto no Studio, com flexibilidade total para personalizações avançadas.</p></div>
       <div class="cap"><span class="cnum">07</span><h4>Biblioteca de templates</h4><p>Modelos prontos para o setor farmacêutico: agilidade sem abrir mão da qualidade.</p></div>
-      <div class="cap"><span class="cnum">08</span><h4>Memória de curto e longo prazo</h4><p>Conversas personalizadas com histórico que realmente entende o cliente da Araújo.</p></div>
-      <div class="cap"><span class="cnum">09</span><h4>Base de conhecimento por negócio</h4><p>Conhecimento da Araújo organizado e gerenciado para respostas consistentes e estratégicas.</p></div>
+      <div class="cap"><span class="cnum">08</span><h4>Memória de curto e longo prazo</h4><p>Conversas personalizadas com histórico que realmente entende o cliente da Araujo.</p></div>
+      <div class="cap"><span class="cnum">09</span><h4>Base de conhecimento por negócio</h4><p>Conhecimento da Araujo organizado e gerenciado para respostas consistentes e estratégicas.</p></div>
     </div>
 
     <div class="gif-wrap rv">
@@ -565,8 +573,8 @@ footer b{color:var(--mute)}
 <section id="arch">
   <div class="wrap">
     <div class="eyebrow rv">Arquitetura de vendas</div>
-    <h1 class="rv" style="font-size:clamp(26px,4vw,50px);max-width:800px;margin-bottom:14px">Arquitetura aplicada à <span class="hl-r">Drogaria Araújo</span></h1>
-    <p class="lead rv">Um único número de WhatsApp com orquestrador inteligente — incluindo a possibilidade de <b>teste A/B</b> entre o agente de vendas Blip e o agente próprio da Araújo.</p>
+    <h1 class="rv" style="font-size:clamp(26px,4vw,50px);max-width:800px;margin-bottom:14px">Arquitetura aplicada à <span class="hl-r">Drogaria Araujo</span></h1>
+    <p class="lead rv">Um único número de WhatsApp com orquestrador inteligente — incluindo a possibilidade de <b>teste A/B</b> entre o agente de vendas Blip e o agente próprio da Araujo.</p>
 
     <div class="arch rv">
       <div class="arch-label">Orquestração no Blip Studio</div>
@@ -590,7 +598,7 @@ footer b{color:var(--mute)}
         </div>
         <div class="arch-agents">
           <div class="arch-agent blue">🛒 Agente de Vendas Blip <span class="ab-badge">A/B · A</span></div>
-          <div class="arch-agent red">🛒 Agente de Vendas Araújo <span class="ab-badge">A/B · B</span></div>
+          <div class="arch-agent red">🛒 Agente de Vendas Araujo <span class="ab-badge">A/B · B</span></div>
           <div class="arch-agent blue">🔄 Agente Recorrência</div>
           <div class="arch-agent amber">💊 Agente Receitas</div>
           <div class="arch-agent green">🎧 Agente SAC</div>
@@ -605,7 +613,7 @@ footer b{color:var(--mute)}
         </div>
       </div>
       <div class="arch-pills">
-        <div class="arch-pill"><b>Teste A/B de vendas</b> — o orquestrador distribui tráfego entre o agente Blip e o agente próprio Araújo, comparando conversão, ticket e NPS.</div>
+        <div class="arch-pill"><b>Teste A/B de vendas</b> — o orquestrador distribui tráfego entre o agente Blip e o agente próprio Araujo, comparando conversão, ticket e NPS.</div>
         <div class="arch-pill"><b>Consulta de estoque em tempo real</b> — o agente verifica disponibilidade por loja antes de confirmar ao cliente, sem alucinação.</div>
         <div class="arch-pill"><b>Meios de pagamento nativos</b> — Pix, cartão e checkout sem sair do WhatsApp via Blip Payments.</div>
       </div>
@@ -627,7 +635,7 @@ footer b{color:var(--mute)}
       <div class="adv"><div class="ico">🧠</div><h4>Gestão centralizada de LLMs</h4><p>LLMs menores para tarefas simples, modelos de ponta para leitura de receita. Troca sem deploy.</p></div>
       <div class="adv"><div class="ico">🤝</div><h4>Handoff inteligente</h4><p>Transcrição de áudio, sugestão de resposta e contexto pronto via Copilot para o atendente.</p></div>
       <div class="adv"><div class="ico">⚡</div><h4>Diminuição de latência</h4><p>Agente dentro do Studio: comunicação direta, sem hops extras, resposta mais rápida para o cliente.</p></div>
-      <div class="adv"><div class="ico">🔗</div><h4>Orquestração de agents próprios</h4><p>Integração futura com agentes proprietários da Araújo. O Studio funciona como hub central.</p></div>
+      <div class="adv"><div class="ico">🔗</div><h4>Orquestração de agents próprios</h4><p>Integração futura com agentes proprietários da Araujo. O Studio funciona como hub central.</p></div>
       <div class="adv"><div class="ico">🧪</div><h4>Testes A/B com diferentes agents</h4><p>Compare performance lado a lado: qual converte mais, qual resolve mais rápido, qual gera melhor NPS.</p></div>
       <div class="adv"><div class="ico">📈</div><h4>Relatórios e dashboards unificados</h4><p>Aplicação em um lugar só = relatórios nativos. Visão 360° sem integrar ferramentas externas.</p></div>
       <div class="adv"><div class="ico">📱</div><h4>Multicanalidade nativa</h4><p>Construa uma vez, replique em WhatsApp, Blip Chat, RCS, Instagram — mesma lógica, canais diferentes.</p></div>
@@ -667,7 +675,7 @@ footer b{color:var(--mute)}
           <path class="ringcomet" d="M401.98 105.5 A250 250 0 1 1 306.59 103.8" fill="none" stroke="url(#ringgrad)" stroke-width="3" stroke-linecap="round"/>
         </svg>
         <div class="hub">
-          <span style="font-size:clamp(22px,3.5vw,36px);font-weight:800;color:var(--blip);font-family:var(--font)">Araújo</span>
+          <span style="font-size:clamp(22px,3.5vw,36px);font-weight:800;color:var(--blip);font-family:var(--font)">Araujo</span>
           <span style="font-size:clamp(10px,1.2vw,13px);color:var(--mute);font-family:var(--mono);letter-spacing:1px">× BLIP</span>
         </div>
         <div class="nodes" id="ringNodes"></div>
@@ -692,14 +700,33 @@ footer b{color:var(--mute)}
 </section>
 
 <!-- DEPENDÊNCIAS -->
-<!-- DE × PARA -->
-<section id="dexpara" style="min-height:auto;padding-bottom:80px">
+<section id="deps">
   <div class="wrap">
-    <div class="eyebrow rv">Curadoria de agosto</div>
-    <h1 class="rv" style="font-size:clamp(26px,4.2vw,52px);max-width:800px;margin-bottom:14px">De × Para: <span class="hl-r">Agent AI</span> → <span class="hl">Studio</span></h1>
-    <p class="lead rv">Cada linha é um ponto observado na curadoria de agosto, com o que muda na migração para o Blip Studio.</p>
+    <div class="eyebrow rv">Integrações necessárias</div>
+    <h1 class="rv" style="font-size:clamp(26px,4.2vw,52px);max-width:800px;margin-bottom:14px">Para que tudo funcione: <span class="hl-r">as integrações críticas</span></h1>
+    <p class="lead rv">A potência do Studio depende do acesso aos sistemas-chave da Araujo. Sem eles, os agentes não conseguem executar — apenas conversar. A disponibilização é <b>pré-requisito</b>.</p>
 
-    <div class="dx-tabs rv" id="dxTabs">
+    <div class="dep-grid rv">
+      <div class="dep"><div class="di">☁️</div><h4>Salesforce</h4><p>Acesso ao CRM para histórico do cliente, abrir/atualizar casos e visão 360° em cada venda.</p><div class="badge">Essencial</div></div>
+      <div class="dep"><div class="di">📦</div><h4>Consulta de Estoque</h4><p>API por loja para confirmar disponibilidade em tempo real antes de vender.</p><div class="badge">Essencial</div></div>
+      <div class="dep"><div class="di">💳</div><h4>Meios de Pagamento</h4><p>Gateway para checkout nativo no WhatsApp — Pix, cartão e open finance.</p><div class="badge">Essencial</div></div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<!-- DE × PARA — página exclusiva -->
+<div class="dx-page" id="dxPage">
+  <div class="wrap">
+    <div class="dx-back" onclick="document.getElementById('dxPage').classList.remove('open');document.body.style.overflow=''">
+      <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Voltar à proposta
+    </div>
+    <div class="eyebrow" style="opacity:1;transform:none">Curadoria de agosto</div>
+    <h1 style="font-size:clamp(26px,4.2vw,52px);max-width:800px;margin-bottom:14px;font-family:var(--font);font-weight:900;color:#fff">De × Para: <span class="hl-r">Agent AI</span> → <span class="hl">Studio</span></h1>
+    <p class="lead" style="max-width:78ch">Cada linha é um ponto observado na curadoria de agosto, com o que muda na migração para o Blip Studio.</p>
+
+    <div class="dx-tabs" id="dxTabs">
       <button class="dx-tab on" data-f="all">Todos</button>
       <button class="dx-tab" data-f="B1">B1 · Compra</button>
       <button class="dx-tab" data-f="B2">B2 · Receita</button>
@@ -709,7 +736,7 @@ footer b{color:var(--mute)}
       <button class="dx-tab" data-f="B6">B6 · Conversa</button>
     </div>
 
-    <div class="dx-tbl-wrap rv">
+    <div class="dx-tbl-wrap">
       <table class="dx-tbl" id="dxTable">
         <thead><tr><th>Bloco</th><th>Ponto de atenção</th><th>DE — hoje</th><th>PARA — Studio</th><th>Frente</th><th style="text-align:right">Registros</th></tr></thead>
         <tbody>
@@ -732,181 +759,61 @@ footer b{color:var(--mute)}
     </div>
 
     <!-- MOCKUPS -->
-    <h1 class="rv" style="font-size:clamp(22px,3vw,36px);margin-top:80px;text-align:center">A experiência <span class="hl">lado a lado</span></h1>
-    <p class="lead rv" style="text-align:center">Três cenários reais da curadoria, comparando o comportamento atual com o que o Studio constrói.</p>
+    <h1 style="font-size:clamp(22px,3vw,36px);margin-top:80px;text-align:center;font-family:var(--font);font-weight:900;color:#fff">A experiência <span class="hl">lado a lado</span></h1>
+    <p class="lead" style="text-align:center">Três cenários reais da curadoria, comparando o comportamento atual com o que o Studio constrói.</p>
 
-    <!-- CENÁRIO 1: Encontrar o produto -->
-    <div class="mock-scenario-title rv">B4 · Encontrar o produto</div>
-    <p class="mock-scenario-sub rv">Princípio ativo e grafia aproximada não resolvem hoje. O Studio normaliza a busca antes de consultar o catálogo.</p>
-    <div class="mock-pair rv">
+    <!-- CENÁRIO 1 -->
+    <div class="mock-scenario-title">B4 · Encontrar o produto</div>
+    <p class="mock-scenario-sub">Princípio ativo e grafia aproximada não resolvem hoje. O Studio normaliza a busca antes de consultar o catálogo.</p>
+    <div class="mock-pair">
       <div class="mock-col">
         <div class="mock-label asis">As Is — Hoje</div>
-        <div class="phone-frame"><div class="phone-notch"></div>
-          <div class="wa-screen">
-            <div class="wa-header">
-              <div class="wa-avatar">A</div>
-              <div><div class="wa-contact-name">Drogaria Araújo</div><div class="wa-contact-status">online</div></div>
-            </div>
-            <div class="wa-body">
-              <div class="wa-date-chip">Hoje</div>
-              <div class="msg msg-out">Oi, tem losartana potássica 50mg?<div class="msg-time">10:02</div></div>
-              <div class="msg msg-in">Olá! 😊 Para eu te ajudar, preciso do <strong>nome exato do produto</strong> como aparece na embalagem. Você pode verificar e me enviar?<div class="msg-time">10:02</div></div>
-              <div class="msg msg-out">Losartana potássica 50mg, caixa com 30<div class="msg-time">10:03</div></div>
-              <div class="msg msg-in">Encontrei algumas opções! Dá uma olhada:<div class="msg-time">10:03</div></div>
-              <div class="msg msg-in" style="font-size:10px;color:#666;text-align:center;background:#f0f0f0">🔗 <u>Veja os resultados no site</u><div class="msg-time">10:03</div></div>
-              <div class="msg msg-out">Mas quanto custa? Quero saber o preço antes de ir pro site<div class="msg-time">10:04</div></div>
-              <div class="msg msg-in">Para ver os preços atualizados, acesse o link que enviei! Lá você encontra todas as informações 😉<div class="msg-time">10:04</div></div>
-              <div class="msg msg-out">😐<div class="msg-time">10:05</div></div>
-            </div>
-            <div class="wa-input-bar"><div class="inp">Mensagem</div><div class="mic"><svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3zm7 11a7 7 0 0 1-14 0H3a9 9 0 0 0 8 8.94V23h2v-2.06A9 9 0 0 0 21 12z"/></svg></div></div>
-          </div>
-        </div>
-        <p class="mock-desc">O preço nunca aparece na conversa. O cliente é redirecionado ao site para descobrir quanto custa.</p>
+        <div class="phone-frame"><div class="phone-notch"></div><div class="wa-screen"><div class="wa-header"><div class="wa-avatar">A</div><div><div class="wa-contact-name">Drogaria Araujo</div><div class="wa-contact-status">online</div></div></div><div class="wa-body"><div class="wa-date-chip">Hoje</div><div class="msg msg-out">Oi, tem losartana potássica 50mg?<div class="msg-time">10:02</div></div><div class="msg msg-in">Olá! 😊 Para eu te ajudar, preciso do <strong>nome exato do produto</strong> como aparece na embalagem. Você pode verificar e me enviar?<div class="msg-time">10:02</div></div><div class="msg msg-out">Losartana potássica 50mg, caixa com 30<div class="msg-time">10:03</div></div><div class="msg msg-in">Encontrei algumas opções! Dá uma olhada:<div class="msg-time">10:03</div></div><div class="msg msg-in" style="font-size:10px;color:#666;text-align:center;background:#f0f0f0">🔗 <u>Veja os resultados no site</u><div class="msg-time">10:03</div></div><div class="msg msg-out">Mas quanto custa?<div class="msg-time">10:04</div></div><div class="msg msg-in">Para ver os preços atualizados, acesse o link que enviei! 😉<div class="msg-time">10:04</div></div><div class="msg msg-out">😐<div class="msg-time">10:05</div></div></div><div class="wa-input-bar"><div class="inp">Mensagem</div><div class="mic"><svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3zm7 11a7 7 0 0 1-14 0H3a9 9 0 0 0 8 8.94V23h2v-2.06A9 9 0 0 0 21 12z"/></svg></div></div></div></div>
+        <p class="mock-desc">O preço nunca aparece na conversa. O cliente é redirecionado ao site.</p>
       </div>
       <div class="mock-col">
         <div class="mock-label tobe">To Be — Studio</div>
-        <div class="phone-frame"><div class="phone-notch"></div>
-          <div class="wa-screen">
-            <div class="wa-header">
-              <div class="wa-avatar">A</div>
-              <div><div class="wa-contact-name">Drogaria Araújo</div><div class="wa-contact-status">online</div></div>
-            </div>
-            <div class="wa-body">
-              <div class="wa-date-chip">Hoje</div>
-              <div class="msg msg-out">Oi, tem losartana potássica 50mg?<div class="msg-time">10:02</div></div>
-              <div class="msg msg-in">Encontrei! Aqui estão as opções de <strong>Losartana Potássica 50mg</strong>:<br><br>💊 <strong>Losartana 50mg · Genérico · 30 cp</strong><br>R$ 12,49<br><br>💊 <strong>Losartana 50mg · Neo Química · 30 cp</strong><br>R$ 14,90<br><br>💊 <strong>Cozaar 50mg · Original · 30 cp</strong><br>R$ 68,90<br><br>Qual você prefere? Posso já montar o carrinho 🛒<div class="msg-time">10:02</div></div>
-              <div class="msg msg-out">O genérico, por favor<div class="msg-time">10:03</div></div>
-              <div class="msg msg-in">Adicionei ao carrinho:<br><br>🛒 <strong>1× Losartana 50mg Genérico 30cp</strong><br>Subtotal: <strong>R$ 12,49</strong><br><br>Quer retirar na loja ou prefere entrega?<div class="msg-time">10:03</div></div>
-            </div>
-            <div class="wa-input-bar"><div class="inp">Mensagem</div><div class="mic"><svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3zm7 11a7 7 0 0 1-14 0H3a9 9 0 0 0 8 8.94V23h2v-2.06A9 9 0 0 0 21 12z"/></svg></div></div>
-          </div>
-        </div>
-        <p class="mock-desc">Busca normaliza o princípio ativo, mostra preço e apresentação em texto e já monta o carrinho.</p>
+        <div class="phone-frame"><div class="phone-notch"></div><div class="wa-screen"><div class="wa-header"><div class="wa-avatar">A</div><div><div class="wa-contact-name">Drogaria Araujo</div><div class="wa-contact-status">online</div></div></div><div class="wa-body"><div class="wa-date-chip">Hoje</div><div class="msg msg-out">Oi, tem losartana potássica 50mg?<div class="msg-time">10:02</div></div><div class="msg msg-in">Encontrei! Opções de <strong>Losartana Potássica 50mg</strong>:<br><br>💊 <strong>Genérico · 30 cp</strong> — R$ 12,49<br>💊 <strong>Neo Química · 30 cp</strong> — R$ 14,90<br>💊 <strong>Cozaar Original · 30 cp</strong> — R$ 68,90<br><br>Qual você prefere? 🛒<div class="msg-time">10:02</div></div><div class="msg msg-out">O genérico<div class="msg-time">10:03</div></div><div class="msg msg-in">🛒 <strong>1× Losartana 50mg Genérico 30cp</strong><br>Subtotal: <strong>R$ 12,49</strong><br><br>Retirar na loja ou entrega?<div class="msg-time">10:03</div></div></div><div class="wa-input-bar"><div class="inp">Mensagem</div><div class="mic"><svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3zm7 11a7 7 0 0 1-14 0H3a9 9 0 0 0 8 8.94V23h2v-2.06A9 9 0 0 0 21 12z"/></svg></div></div></div></div>
+        <p class="mock-desc">Preço em texto, carrinho montado na conversa.</p>
       </div>
     </div>
 
-    <!-- CENÁRIO 2: Fraseologia / UX de conversa — repetição -->
-    <div class="mock-scenario-title rv">B6 · Fraseologia / UX de conversa</div>
-    <p class="mock-scenario-sub rv">A mesma mensagem voltando palavra por palavra de 2 a 15 vezes. O Studio corta o circuito na segunda repetição.</p>
-    <div class="mock-pair rv">
+    <!-- CENÁRIO 2 -->
+    <div class="mock-scenario-title">B6 · Fraseologia / UX de conversa</div>
+    <p class="mock-scenario-sub">A mesma mensagem voltando de 2 a 15 vezes. O Studio corta na segunda repetição.</p>
+    <div class="mock-pair">
       <div class="mock-col">
         <div class="mock-label asis">As Is — Hoje</div>
-        <div class="phone-frame"><div class="phone-notch"></div>
-          <div class="wa-screen">
-            <div class="wa-header">
-              <div class="wa-avatar">A</div>
-              <div><div class="wa-contact-name">Drogaria Araújo</div><div class="wa-contact-status">online</div></div>
-            </div>
-            <div class="wa-body">
-              <div class="wa-date-chip">Hoje</div>
-              <div class="msg msg-out">Quero comprar dipirona<div class="msg-time">14:20</div></div>
-              <div class="msg msg-in">Claro! Posso te ajudar com a Dipirona. Para encontrar o produto certo, me diz a apresentação que você prefere: gotas, comprimido ou solução oral?<div class="msg-time">14:20</div></div>
-              <div class="msg msg-out">Comprimido<div class="msg-time">14:21</div></div>
-              <div class="msg msg-in">Claro! Posso te ajudar com a Dipirona. Para encontrar o produto certo, me diz a apresentação que você prefere: gotas, comprimido ou solução oral?<div class="msg-time">14:21</div></div>
-              <div class="msg msg-out">Comprimido!<div class="msg-time">14:22</div></div>
-              <div class="msg msg-in">Claro! Posso te ajudar com a Dipirona. Para encontrar o produto certo, me diz a apresentação que você prefere: gotas, comprimido ou solução oral?<div class="msg-time">14:22</div></div>
-              <div class="msg msg-out">Já falei, COMPRIMIDO<div class="msg-time">14:23</div></div>
-              <div class="msg msg-in">Claro! Posso te ajudar com a Dipirona. Para encontrar o produto certo, me diz a apresentação que você prefere: gotas, comprimido ou solução oral?<div class="msg-time">14:23</div></div>
-            </div>
-            <div class="wa-input-bar"><div class="inp">Mensagem</div><div class="mic"><svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3zm7 11a7 7 0 0 1-14 0H3a9 9 0 0 0 8 8.94V23h2v-2.06A9 9 0 0 0 21 12z"/></svg></div></div>
-          </div>
-        </div>
-        <p class="mock-desc">A mesma resposta se repete sem avançar a conversa, independentemente do que o cliente diga.</p>
+        <div class="phone-frame"><div class="phone-notch"></div><div class="wa-screen"><div class="wa-header"><div class="wa-avatar">A</div><div><div class="wa-contact-name">Drogaria Araujo</div><div class="wa-contact-status">online</div></div></div><div class="wa-body"><div class="wa-date-chip">Hoje</div><div class="msg msg-out">Quero comprar dipirona<div class="msg-time">14:20</div></div><div class="msg msg-in">Claro! Posso te ajudar com a Dipirona. Me diz a apresentação: gotas, comprimido ou solução oral?<div class="msg-time">14:20</div></div><div class="msg msg-out">Comprimido<div class="msg-time">14:21</div></div><div class="msg msg-in">Claro! Posso te ajudar com a Dipirona. Me diz a apresentação: gotas, comprimido ou solução oral?<div class="msg-time">14:21</div></div><div class="msg msg-out">Comprimido!<div class="msg-time">14:22</div></div><div class="msg msg-in">Claro! Posso te ajudar com a Dipirona. Me diz a apresentação: gotas, comprimido ou solução oral?<div class="msg-time">14:22</div></div><div class="msg msg-out">Já falei, COMPRIMIDO<div class="msg-time">14:23</div></div><div class="msg msg-in">Claro! Posso te ajudar com a Dipirona. Me diz a apresentação: gotas, comprimido ou solução oral?<div class="msg-time">14:23</div></div></div><div class="wa-input-bar"><div class="inp">Mensagem</div><div class="mic"><svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3zm7 11a7 7 0 0 1-14 0H3a9 9 0 0 0 8 8.94V23h2v-2.06A9 9 0 0 0 21 12z"/></svg></div></div></div></div>
+        <p class="mock-desc">Mesma resposta 4× sem avançar.</p>
       </div>
       <div class="mock-col">
         <div class="mock-label tobe">To Be — Studio</div>
-        <div class="phone-frame"><div class="phone-notch"></div>
-          <div class="wa-screen">
-            <div class="wa-header">
-              <div class="wa-avatar">A</div>
-              <div><div class="wa-contact-name">Drogaria Araújo</div><div class="wa-contact-status">online</div></div>
-            </div>
-            <div class="wa-body">
-              <div class="wa-date-chip">Hoje</div>
-              <div class="msg msg-out">Quero comprar dipirona<div class="msg-time">14:20</div></div>
-              <div class="msg msg-in">Encontrei opções de <strong>Dipirona</strong> em comprimido, gotas e solução oral. Qual apresentação você prefere?<div class="msg-time">14:20</div></div>
-              <div class="msg msg-out">Comprimido<div class="msg-time">14:21</div></div>
-              <div class="msg msg-in">Perfeito! Aqui estão as opções em <strong>comprimido</strong>:<br><br>💊 <strong>Dipirona 500mg · 10 cp</strong><br>R$ 3,49<br><br>💊 <strong>Dipirona 1g · 10 cp</strong><br>R$ 6,29<br><br>Qual delas?<div class="msg-time">14:21</div></div>
-              <div class="msg msg-out">A de 500mg<div class="msg-time">14:22</div></div>
-              <div class="msg msg-in">Adicionei ao carrinho!<br>🛒 <strong>1× Dipirona 500mg 10cp — R$ 3,49</strong><br><br>Precisa de mais alguma coisa ou quer finalizar?<div class="msg-time">14:22</div></div>
-            </div>
-            <div class="wa-input-bar"><div class="inp">Mensagem</div><div class="mic"><svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3zm7 11a7 7 0 0 1-14 0H3a9 9 0 0 0 8 8.94V23h2v-2.06A9 9 0 0 0 21 12z"/></svg></div></div>
-          </div>
-        </div>
-        <p class="mock-desc">O fluxo registra a resposta do cliente e avança. Se detectar repetição, corta e oferece caminho alternativo.</p>
+        <div class="phone-frame"><div class="phone-notch"></div><div class="wa-screen"><div class="wa-header"><div class="wa-avatar">A</div><div><div class="wa-contact-name">Drogaria Araujo</div><div class="wa-contact-status">online</div></div></div><div class="wa-body"><div class="wa-date-chip">Hoje</div><div class="msg msg-out">Quero comprar dipirona<div class="msg-time">14:20</div></div><div class="msg msg-in">Opções de <strong>Dipirona</strong>: comprimido, gotas e solução oral. Qual?<div class="msg-time">14:20</div></div><div class="msg msg-out">Comprimido<div class="msg-time">14:21</div></div><div class="msg msg-in">Perfeito! Em <strong>comprimido</strong>:<br><br>💊 <strong>Dipirona 500mg · 10 cp</strong> — R$ 3,49<br>💊 <strong>Dipirona 1g · 10 cp</strong> — R$ 6,29<br><br>Qual delas?<div class="msg-time">14:21</div></div><div class="msg msg-out">A de 500mg<div class="msg-time">14:22</div></div><div class="msg msg-in">🛒 <strong>1× Dipirona 500mg 10cp — R$ 3,49</strong><br><br>Mais alguma coisa ou quer finalizar?<div class="msg-time">14:22</div></div></div><div class="wa-input-bar"><div class="inp">Mensagem</div><div class="mic"><svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3zm7 11a7 7 0 0 1-14 0H3a9 9 0 0 0 8 8.94V23h2v-2.06A9 9 0 0 0 21 12z"/></svg></div></div></div></div>
+        <p class="mock-desc">O fluxo avança a cada turno do cliente.</p>
       </div>
     </div>
 
-    <!-- CENÁRIO 3: Erro técnico de API -->
-    <div class="mock-scenario-title rv">B6 · Erro técnico de API (500/502)</div>
-    <p class="mock-scenario-sub rv">Quando a integração falha, o cliente hoje fica sem resposta. O Studio garante fallback determinístico.</p>
-    <div class="mock-pair rv">
+    <!-- CENÁRIO 3 -->
+    <div class="mock-scenario-title">B6 · Erro técnico de API (500/502)</div>
+    <p class="mock-scenario-sub">Quando a integração falha, o cliente hoje fica no vácuo. O Studio garante fallback.</p>
+    <div class="mock-pair">
       <div class="mock-col">
         <div class="mock-label asis">As Is — Hoje</div>
-        <div class="phone-frame"><div class="phone-notch"></div>
-          <div class="wa-screen">
-            <div class="wa-header">
-              <div class="wa-avatar">A</div>
-              <div><div class="wa-contact-name">Drogaria Araújo</div><div class="wa-contact-status">online</div></div>
-            </div>
-            <div class="wa-body">
-              <div class="wa-date-chip">Hoje</div>
-              <div class="msg msg-out">Quero ver o status do meu pedido<div class="msg-time">16:40</div></div>
-              <div class="msg msg-sys" style="margin:30px 0;font-size:10px;color:#999;font-style:italic;background:transparent;box-shadow:none">⏳ Aguardando…</div>
-              <div class="msg msg-out">Oi?<div class="msg-time">16:55</div></div>
-              <div class="msg msg-sys" style="margin:30px 0;font-size:10px;color:#999;font-style:italic;background:transparent;box-shadow:none">⏳ Aguardando…</div>
-              <div class="msg msg-out">Alguém aí? Já fazem 70 minutos<div class="msg-time">17:50</div></div>
-              <div class="msg msg-sys" style="margin:30px 0;font-size:10px;color:#999;font-style:italic;background:transparent;box-shadow:none">⏳ Sem resposta</div>
-            </div>
-            <div class="wa-input-bar"><div class="inp">Mensagem</div><div class="mic"><svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3zm7 11a7 7 0 0 1-14 0H3a9 9 0 0 0 8 8.94V23h2v-2.06A9 9 0 0 0 21 12z"/></svg></div></div>
-          </div>
-        </div>
-        <p class="mock-desc">A API falha e o cliente fica no vácuo. Sem retentativa, sem mensagem, sem encaminhamento.</p>
+        <div class="phone-frame"><div class="phone-notch"></div><div class="wa-screen"><div class="wa-header"><div class="wa-avatar">A</div><div><div class="wa-contact-name">Drogaria Araujo</div><div class="wa-contact-status">online</div></div></div><div class="wa-body"><div class="wa-date-chip">Hoje</div><div class="msg msg-out">Quero ver o status do meu pedido<div class="msg-time">16:40</div></div><div class="msg" style="align-self:center;background:transparent;box-shadow:none;font-size:10px;color:#999;font-style:italic;margin:30px 0">⏳ Aguardando…</div><div class="msg msg-out">Oi?<div class="msg-time">16:55</div></div><div class="msg" style="align-self:center;background:transparent;box-shadow:none;font-size:10px;color:#999;font-style:italic;margin:30px 0">⏳ Aguardando…</div><div class="msg msg-out">Alguém aí? Já fazem 70 min<div class="msg-time">17:50</div></div><div class="msg" style="align-self:center;background:transparent;box-shadow:none;font-size:10px;color:#999;font-style:italic;margin:30px 0">⏳ Sem resposta</div></div><div class="wa-input-bar"><div class="inp">Mensagem</div><div class="mic"><svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3zm7 11a7 7 0 0 1-14 0H3a9 9 0 0 0 8 8.94V23h2v-2.06A9 9 0 0 0 21 12z"/></svg></div></div></div></div>
+        <p class="mock-desc">70 minutos de silêncio. Sem retentativa, sem mensagem.</p>
       </div>
       <div class="mock-col">
         <div class="mock-label tobe">To Be — Studio</div>
-        <div class="phone-frame"><div class="phone-notch"></div>
-          <div class="wa-screen">
-            <div class="wa-header">
-              <div class="wa-avatar">A</div>
-              <div><div class="wa-contact-name">Drogaria Araújo</div><div class="wa-contact-status">online</div></div>
-            </div>
-            <div class="wa-body">
-              <div class="wa-date-chip">Hoje</div>
-              <div class="msg msg-out">Quero ver o status do meu pedido<div class="msg-time">16:40</div></div>
-              <div class="msg msg-in">Estou consultando seu pedido, só um instante… ⏳<div class="msg-time">16:40</div></div>
-              <div class="msg msg-in">Tive uma instabilidade ao consultar o sistema agora. Já estou tentando de novo…<div class="msg-time">16:40</div></div>
-              <div class="msg msg-in">Não consegui acessar o sistema de pedidos neste momento. Mas não vou te deixar sem resposta!<br><br>Posso te transferir para um atendente que consulta na hora, ou, se preferir, te aviso assim que o sistema voltar.<br><br>O que prefere?<div class="msg-time">16:41</div></div>
-              <div class="msg msg-out">Pode me transferir<div class="msg-time">16:41</div></div>
-              <div class="msg msg-in">Transferindo agora. A Ana vai te atender com o contexto do que conversamos. Um momento! 🙂<div class="msg-time">16:41</div></div>
-            </div>
-            <div class="wa-input-bar"><div class="inp">Mensagem</div><div class="mic"><svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3zm7 11a7 7 0 0 1-14 0H3a9 9 0 0 0 8 8.94V23h2v-2.06A9 9 0 0 0 21 12z"/></svg></div></div>
-          </div>
-        </div>
-        <p class="mock-desc">Retentativa automática, mensagem de contingência e transbordo com contexto. O silêncio deixa de existir.</p>
+        <div class="phone-frame"><div class="phone-notch"></div><div class="wa-screen"><div class="wa-header"><div class="wa-avatar">A</div><div><div class="wa-contact-name">Drogaria Araujo</div><div class="wa-contact-status">online</div></div></div><div class="wa-body"><div class="wa-date-chip">Hoje</div><div class="msg msg-out">Quero ver o status do meu pedido<div class="msg-time">16:40</div></div><div class="msg msg-in">Consultando seu pedido… ⏳<div class="msg-time">16:40</div></div><div class="msg msg-in">Tive uma instabilidade. Já estou tentando de novo…<div class="msg-time">16:40</div></div><div class="msg msg-in">Não consegui acessar o sistema agora. Mas não vou te deixar sem resposta!<br><br>Posso te transferir para um atendente ou te avisar quando voltar. O que prefere?<div class="msg-time">16:41</div></div><div class="msg msg-out">Pode me transferir<div class="msg-time">16:41</div></div><div class="msg msg-in">Transferindo! A Ana vai te atender com o contexto da conversa. 🙂<div class="msg-time">16:41</div></div></div><div class="wa-input-bar"><div class="inp">Mensagem</div><div class="mic"><svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3zm7 11a7 7 0 0 1-14 0H3a9 9 0 0 0 8 8.94V23h2v-2.06A9 9 0 0 0 21 12z"/></svg></div></div></div></div>
+        <p class="mock-desc">Retentativa, contingência e transbordo com contexto.</p>
       </div>
     </div>
 
   </div>
-</section>
-
-<section id="deps">
-  <div class="wrap">
-    <div class="eyebrow rv">Integrações necessárias</div>
-    <h1 class="rv" style="font-size:clamp(26px,4.2vw,52px);max-width:800px;margin-bottom:14px">Para que tudo funcione: <span class="hl-r">as integrações críticas</span></h1>
-    <p class="lead rv">A potência do Studio depende do acesso aos sistemas-chave da Araújo. Sem eles, os agentes não conseguem executar — apenas conversar. A disponibilização é <b>pré-requisito</b>.</p>
-
-    <div class="dep-grid rv">
-      <div class="dep"><div class="di">☁️</div><h4>Salesforce</h4><p>Acesso ao CRM para histórico do cliente, abrir/atualizar casos e visão 360° em cada venda.</p><div class="badge">Essencial</div></div>
-      <div class="dep"><div class="di">📦</div><h4>Consulta de Estoque</h4><p>API por loja para confirmar disponibilidade em tempo real antes de vender.</p><div class="badge">Essencial</div></div>
-      <div class="dep"><div class="di">💳</div><h4>Meios de Pagamento</h4><p>Gateway para checkout nativo no WhatsApp — Pix, cartão e open finance.</p><div class="badge">Essencial</div></div>
-    </div>
-  </div>
-</section>
-
 </div>
 
-<footer>Proposta executiva <b>Drogaria Araújo × Blip</b> · Orquestração Multiagentes no Blip Studio · Documento ilustrativo para fins comerciais.</footer>
+<footer>Proposta executiva <b>Drogaria Araujo × Blip</b> · Orquestração Multiagentes no Blip Studio · Documento ilustrativo para fins comerciais.</footer>
 
 <script>
 const scroller=document.getElementById('scroller');
@@ -932,6 +839,12 @@ sections.forEach(s=>ioD.observe(s));
         r.style.display=(f==='all'||r.getAttribute('data-b')===f)?'':'none';
       });
     });
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'){
+      var p=document.getElementById('dxPage');
+      if(p&&p.classList.contains('open')){p.classList.remove('open');document.body.style.overflow='';}
+    }
   });
 })();
 
@@ -1053,10 +966,10 @@ var cards='<div class="bcard"><div class="bi">📈</div><div class="bt">Ver o ú
   '<div class="bcard"><div class="bi">📖</div><div class="bt">Base de conhecimento</div><div class="bp">Política comercial, bulas, estoque e escopo de entrega.</div></div>';
 
 bd.innerHTML=
-  '<div class="brain-top"><div class="wd"><i></i><i></i><i></i></div>'+blueBalloon+'<span class="bc">Drogaria Araújo · Workspace</span>'+
+  '<div class="brain-top"><div class="wd"><i></i><i></i><i></i></div>'+blueBalloon+'<span class="bc">Drogaria Araujo · Workspace</span>'+
     '<span class="bpill">✦ Explore with Brain</span><span class="bav"></span></div>'+
   '<div class="brain-body"><div class="brain-rail">'+rail+'</div><div class="brain-main">'+
-    '<div class="brain-home" id="bHome"><div class="brain-greet"><div class="spk">✦</div><h4>Olá, equipe Araújo.</h4><div class="grad">Use IA para conduzir a evolução do canal</div></div>'+
+    '<div class="brain-home" id="bHome"><div class="brain-greet"><div class="spk">✦</div><h4>Olá, equipe Araujo.</h4><div class="grad">Use IA para conduzir a evolução do canal</div></div>'+
       '<div class="brain-cards">'+cards+'</div>'+
       '<div class="brain-input" id="bInput"><div class="txt" id="bTxt"><span class="ph">Chat with Brain</span></div>'+
         '<div class="chips"><span class="bchip">＋</span><span class="bchip">✦ Create</span><span class="bchip on">▤ Plan</span><span class="bchip">🔍 Explore</span><span class="snd2">'+arrow+'</span></div></div>'+
