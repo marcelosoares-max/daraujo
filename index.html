@@ -321,31 +321,72 @@ section.in .rv:nth-child(5){transition-delay:.28s}
 .mock-label.asis{color:#ff6b6b;border:1px solid rgba(255,107,107,.3);background:rgba(255,107,107,.08)}
 .mock-label.tobe{color:#25D366;border:1px solid rgba(37,211,102,.3);background:rgba(37,211,102,.08)}
 .mock-desc{font-size:12px;color:var(--dim);text-align:center;max-width:320px;line-height:1.5}
-.phone-frame{width:310px;max-width:100%;height:580px;background:#111;border-radius:40px;border:7px solid #222;overflow:hidden;position:relative;box-shadow:0 0 0 1px #333,0 30px 80px rgba(0,0,0,.6)}
-.phone-notch{position:absolute;top:0;left:50%;transform:translateX(-50%);width:110px;height:26px;background:#111;border-radius:0 0 18px 18px;z-index:10}
-.wa-screen{width:100%;height:100%;display:flex;flex-direction:column;background:#ECE5DD;font-family:-apple-system,'Helvetica Neue',sans-serif;overflow:hidden}
-.wa-header{background:#128C7E;padding:30px 12px 10px;display:flex;align-items:center;gap:10px;flex-shrink:0;min-height:64px}
-.wa-avatar{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.9rem;font-weight:700;color:white;flex-shrink:0;background:linear-gradient(135deg,#E2001A,#7A1F14)}
+.phone-frame{width:310px;max-width:100%;height:580px;background:#0A0A0A;border-radius:44px;padding:10px;overflow:hidden;position:relative;box-shadow:0 0 0 2px #1d1d1d,0 40px 80px -24px rgba(11,27,51,.55)}
+.phone-screen{width:100%;height:100%;border-radius:36px;overflow:hidden;position:relative;background:#000;display:flex;flex-direction:column}
+.phone-notch{position:absolute;top:0;left:50%;transform:translateX(-50%);width:120px;height:24px;background:#0A0A0A;border-radius:0 0 16px 16px;z-index:10;display:flex;align-items:center;justify-content:center;gap:6px}
+.phone-notch i{width:7px;height:7px;border-radius:50%;background:#232323;display:block}
+.phone-notch b{width:36px;height:4px;border-radius:4px;background:#232323;display:block}
+.wa-screen{width:100%;height:100%;display:flex;flex-direction:column;background:#E4DDD4;font-family:-apple-system,'Helvetica Neue',sans-serif;overflow:hidden;border-radius:36px}
+.wa-header{background:#075E54;padding:30px 12px 10px;display:flex;align-items:center;gap:10px;flex-shrink:0;min-height:64px}
+.wa-avatar{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:700;color:white;flex-shrink:0;background:linear-gradient(135deg,#E2001A,#7A1F14)}
 .wa-contact-name{font-size:.85rem;font-weight:600;color:white}
 .wa-contact-status{font-size:.68rem;color:rgba(255,255,255,.7)}
-.wa-body{flex:1;overflow-y:auto;padding:10px 8px;display:flex;flex-direction:column;gap:3px;min-height:0}
+.wa-body{flex:1;overflow-y:auto;padding:10px 8px;display:flex;flex-direction:column;gap:5px;min-height:0;
+  background-image:linear-gradient(rgba(228,221,212,.55),rgba(228,221,212,.55)),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'><g fill='%23d9cfc2' fill-opacity='.4'><circle cx='6' cy='6' r='1.2'/><circle cx='26' cy='18' r='1.2'/><circle cx='14' cy='32' r='1.2'/></g></svg>")}
 .wa-body::-webkit-scrollbar{width:3px}
-.wa-body::-webkit-scrollbar-thumb{background:rgba(0,0,0,.2);border-radius:3px}
-.wa-date-chip{align-self:center;background:rgba(225,245,254,.9);color:#546E7A;font-size:.63rem;padding:3px 10px;border-radius:10px;margin:6px 0}
-.msg{max-width:82%;padding:7px 10px 6px;border-radius:8px;font-size:11.5px;line-height:1.45;color:#111;word-break:break-word;box-shadow:0 1px .5px rgba(0,0,0,.13)}
+.wa-body::-webkit-scrollbar-thumb{background:rgba(0,0,0,.18);border-radius:3px}
+.wa-date-chip{align-self:center;background:#D5E8F5;color:#4a6572;font-size:.64rem;font-weight:600;padding:4px 12px;border-radius:8px;margin:4px 0;box-shadow:0 1px 1px rgba(0,0,0,.06)}
+.msg{max-width:82%;padding:7px 10px 6px;border-radius:9px;font-size:.8rem;line-height:1.44;color:#111;word-break:break-word;box-shadow:0 1px .5px rgba(0,0,0,.13);position:relative;animation:msgPop .32s ease}
+@keyframes msgPop{from{opacity:0;transform:translateY(8px) scale(.98)}to{opacity:1;transform:none}}
 .msg strong{font-weight:700}
-.msg-in{background:#fff;align-self:flex-start;border-top-left-radius:0}
-.msg-out{background:#DCF8C6;align-self:flex-end;border-top-right-radius:0}
-.msg-time{font-size:.58rem;color:rgba(0,0,0,.4);text-align:right;margin-top:3px}
-.msg-sys{align-self:center;background:rgba(225,245,254,.9);color:#546E7A;font-size:.62rem;padding:3px 10px;border-radius:10px;box-shadow:none}
-.wa-btn-row{display:flex;flex-direction:column;max-width:82%;align-self:flex-start}
+.msg-in{background:#fff;align-self:flex-start;border-top-left-radius:2px}
+.msg-out{background:#DCF8C6;align-self:flex-end;border-top-right-radius:2px}
+.msg-time{font-size:.58rem;color:rgba(0,0,0,.38);float:right;margin:4px 0 -2px 8px}
+.msg-sys{align-self:center;background:#FCF4CB;color:#7a6a2a;font-size:.64rem;padding:4px 10px;border-radius:8px;box-shadow:none;text-align:center;max-width:88%;line-height:1.4}
+.wa-btn-row{display:flex;flex-direction:column;max-width:82%;align-self:flex-start;animation:msgPop .3s}
 .wa-btn-row .msg-in{border-radius:0 8px 0 0;max-width:100%;width:100%}
 .wa-btns{background:white;border-radius:0 0 8px 8px;overflow:hidden;box-shadow:0 1px .5px rgba(0,0,0,.13)}
-.wa-btn{border:none;border-top:1px solid #E5E5E5;padding:8px;font-size:11px;font-weight:500;color:#00A884;cursor:pointer;text-align:center;width:100%;background:white;font-family:-apple-system,sans-serif}
-.wa-input-bar{display:flex;align-items:center;gap:6px;padding:6px 8px;background:#F0F0F0;flex-shrink:0}
+.wa-btn{border:none;border-top:1px solid #eef0f2;padding:10px;font-size:.8rem;font-weight:600;color:#00A5F4;cursor:pointer;text-align:center;width:100%;background:white;font-family:-apple-system,sans-serif;transition:.2s;display:flex;align-items:center;justify-content:center;gap:6px}
+.wa-btn:first-child{border-top:none}
+.wa-btn:hover{background:#EAF7FF}
+.wa-input-bar{display:flex;align-items:center;gap:6px;padding:6px 8px;background:#F0F0F0;flex-shrink:0;border-radius:0 0 36px 36px}
 .wa-input-bar .inp{flex:1;background:white;border-radius:20px;padding:8px 14px;font-size:11px;color:#666}
-.wa-input-bar .mic{width:34px;height:34px;border-radius:50%;background:#128C7E;display:flex;align-items:center;justify-content:center}
+.wa-input-bar .mic{width:34px;height:34px;border-radius:50%;background:#075E54;display:flex;align-items:center;justify-content:center}
 .wa-input-bar .mic svg{width:16px;height:16px;fill:white}
+
+/* Site overlay for As Is flow */
+.site-overlay{position:absolute;inset:0;z-index:20;background:#fff;border-radius:36px;overflow:hidden;display:flex;flex-direction:column;opacity:0;visibility:hidden;transition:opacity .35s}
+.site-overlay.open{opacity:1;visibility:visible}
+.site-bar{background:linear-gradient(135deg,#E2001A,#B00015);padding:28px 14px 10px;display:flex;align-items:center;gap:8px;flex-shrink:0}
+.site-bar .sb-back{color:rgba(255,255,255,.8);font-size:16px;cursor:pointer;padding:2px 6px}
+.site-bar .sb-url{flex:1;background:rgba(255,255,255,.18);border-radius:8px;padding:6px 10px;font-size:9px;color:rgba(255,255,255,.85);font-family:var(--mono);display:flex;align-items:center;gap:4px;overflow:hidden}
+.site-bar .sb-url .lock{color:#7ff0b8}
+.site-body{flex:1;overflow-y:auto;padding:20px 16px;background:#fff}
+.site-body h3{font-family:var(--font);font-size:16px;font-weight:700;color:#1a1a2e;margin-bottom:6px}
+.site-body p{font-size:11px;color:#6b7280;margin-bottom:16px;line-height:1.5}
+.site-body label{display:block;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#9ca3af;margin-bottom:4px;margin-top:14px}
+.site-body label:first-of-type{margin-top:0}
+.site-body input{width:100%;padding:10px 12px;font-size:12px;border:1.5px solid #e5e7eb;border-radius:8px;outline:none;font-family:inherit;color:#111;background:#f9fafb;transition:.2s}
+.site-body input:focus{border-color:#E2001A;background:#fff;box-shadow:0 0 0 3px rgba(226,0,26,.08)}
+.site-cta{width:100%;padding:10px;border-radius:8px;background:linear-gradient(135deg,#E2001A,#B00015);color:#fff;font-size:12px;font-weight:700;border:none;cursor:pointer;font-family:inherit;margin-top:18px;transition:.15s}
+.site-cta:hover{filter:brightness(1.1)}
+.site-cta:disabled{opacity:.5;cursor:default}
+.site-divider{text-align:center;color:#d1d5db;font-size:10px;margin:18px 0;position:relative}
+.site-divider::before,.site-divider::after{content:'';position:absolute;top:50%;width:36%;height:1px;background:#e5e7eb}
+.site-divider::before{left:0}
+.site-divider::after{right:0}
+.site-logo{text-align:center;margin-bottom:14px}
+.site-logo span{font-family:var(--font);font-weight:800;font-size:18px;color:#E2001A}
+.site-steps{display:flex;align-items:center;justify-content:center;gap:6px;margin-bottom:18px}
+.site-step{display:flex;align-items:center;gap:4px;font-size:9px;color:#9ca3af;font-weight:600}
+.site-step.active{color:#E2001A}
+.site-step .sn{width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:800;border:1.5px solid #d1d5db}
+.site-step.active .sn{background:#E2001A;color:#fff;border-color:#E2001A}
+.site-step.done .sn{background:#10B981;color:#fff;border-color:#10B981}
+.site-arr{color:#d1d5db;font-size:10px}
+.site-friction{background:#FEF3C7;border:1px solid #FCD34D;border-radius:8px;padding:10px 12px;margin-top:14px;font-size:10px;color:#92400E;line-height:1.5;display:flex;gap:6px}
+.site-friction .fi{flex-shrink:0;font-size:14px}
 .mock-scenario-title{font-family:var(--font);font-size:clamp(18px,2vw,24px);font-weight:800;color:#fff;margin:50px 0 6px;text-align:center}
 .mock-scenario-sub{font-size:13px;color:var(--mute);text-align:center;max-width:700px;margin:0 auto 10px;line-height:1.6}
 
@@ -382,6 +423,129 @@ footer b{color:var(--mute)}
   .scroller{scroll-snap-type:none}
   .dots,.topnav{display:none}
 }
+
+/* ===== Checkout Mockups Section ===== */
+.ck-section-title{font-size:clamp(26px,4.2vw,52px);max-width:800px;margin-bottom:14px}
+.ck-benefits{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:40px}
+.ck-ben{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px 18px;text-align:center;transition:transform .3s,border-color .3s}
+.ck-ben:hover{transform:translateY(-4px);border-color:rgba(0,150,250,.4)}
+.ck-ben .bi{font-size:28px;margin-bottom:10px}
+.ck-ben h4{font-size:14px;font-weight:700;margin-bottom:6px;color:#fff}
+.ck-ben p{font-size:12px;color:var(--mute);line-height:1.5}
+@media(max-width:700px){.ck-benefits{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.ck-benefits{grid-template-columns:1fr}}
+
+/* phone tall for open finance overlay */
+.phone-frame.tall{position:relative}
+.phone-frame.tall .phone-screen{position:relative}
+
+/* open finance overlay inside phone */
+.ofw{position:absolute;inset:0;z-index:15;background:#000;display:flex;flex-direction:column;
+  opacity:0;visibility:hidden;transition:opacity .28s ease;font-size:12px;border-radius:36px;overflow:hidden}
+.ofw.on{opacity:1;visibility:visible}
+.ofw-status{display:flex;align-items:center;justify-content:space-between;padding:7px 14px 3px;
+  font-family:var(--font);font-size:10.5px;color:#fff;font-weight:600;flex:0 0 auto}
+.ofw-status .rgt{display:flex;gap:5px;align-items:center;opacity:.85;font-size:9px}
+.ofw-scr{flex:1;overflow-y:auto;scrollbar-width:none;display:flex;flex-direction:column}
+.ofw-scr::-webkit-scrollbar{width:0}
+.ofw-bar{display:flex;align-items:center;gap:10px;padding:10px 14px;color:#fff;font-weight:700;font-size:13px;flex:0 0 auto}
+.ofw-bar .bk{color:#8e97b5;font-size:15px;cursor:pointer}
+.ofw-bar .ttl{flex:1;text-align:center;margin-right:16px}
+.ofw-search{margin:0 14px 12px;background:#14161d;border:1px solid rgba(255,255,255,.09);border-radius:9px;
+  padding:8px 11px;color:#7d849b;font-size:11.5px;display:flex;gap:7px;align-items:center;flex:0 0 auto}
+.ofw-lbl{padding:0 14px;color:#8e97b5;font-size:10px;font-weight:700;letter-spacing:.6px;margin-bottom:9px}
+.ofw-banks{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:0 14px;margin-bottom:14px}
+.ofb{background:#14161d;border:1px solid rgba(255,255,255,.08);border-radius:11px;padding:9px 4px;text-align:center;cursor:pointer;
+  transition:border-color .2s,background .2s;position:relative}
+.ofb .mk{width:26px;height:26px;border-radius:50%;margin:0 auto 5px;display:flex;align-items:center;justify-content:center;
+  font-family:var(--font);font-weight:800;font-size:11px;color:#fff}
+.ofb .nm{font-size:8.6px;color:#c8cee2;line-height:1.2}
+.ofb.sel{border-color:#00e07a;background:rgba(0,224,122,.08)}
+.ofb.sel::after{content:"✓";position:absolute;top:4px;right:5px;color:#00e07a;font-size:9px;font-weight:800}
+.ofw-rows{padding:0 14px;display:flex;flex-direction:column;gap:1px;flex:1}
+.ofr{display:flex;align-items:center;gap:9px;padding:8px 2px;border-bottom:1px solid rgba(255,255,255,.05)}
+.ofr .mk{width:22px;height:22px;border-radius:6px;background:#1d212c;display:flex;align-items:center;justify-content:center;
+  font-size:9px;font-weight:700;color:#9aa3bd;font-family:var(--font);flex:0 0 auto}
+.ofr .nm{font-size:11px;color:#e6e9f5}
+.ofw-cta{padding:12px 14px 16px;flex:0 0 auto}
+.ofw-btn{background:#00c96b;color:#04240f;font-family:var(--font);font-weight:800;font-size:12.5px;text-align:center;
+  padding:11px;border-radius:9px;cursor:pointer}
+.ofw-btn.ghost{background:transparent;color:#00e07a;font-weight:700;padding:9px;margin-top:2px}
+.ofw-btn.dis{background:#1d212c;color:#666e85;cursor:default}
+.ofw-card{margin:0 14px;background:#14161d;border:1px solid rgba(255,255,255,.08);border-radius:12px;overflow:hidden}
+.ofw-card .hd{display:flex;align-items:center;justify-content:space-between;padding:10px 12px;border-bottom:1px solid rgba(255,255,255,.06)}
+.ofw-card .hd .k{font-size:9px;color:#8e97b5;letter-spacing:.5px}
+.ofw-card .hd .lnk{font-size:10px;color:#00e07a;font-weight:700}
+.ofw-card .bd{padding:10px 12px;display:flex;gap:9px;align-items:flex-start}
+.ofw-card .bd .mk{width:24px;height:24px;border-radius:50%;background:#2b8fff;display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;flex:0 0 auto}
+.ofw-card .bd .nm{font-size:11.5px;color:#fff;font-weight:700;margin-bottom:3px}
+.ofw-card .bd .ln{font-size:8.8px;color:#7d849b;line-height:1.45;word-break:break-all}
+.ofw-tot{display:flex;align-items:center;justify-content:space-between;padding:11px 12px;border-top:1px solid rgba(255,255,255,.06)}
+.ofw-tot .k{font-size:11px;color:#c8cee2;font-weight:700}
+.ofw-tot .v{font-family:var(--mono);font-size:13px;color:#fff;font-weight:700}
+.ofw-fine{padding:11px 16px;color:#6f7691;font-size:9px;line-height:1.5;text-align:center}
+.ofw-pw{text-align:center;color:#5d6480;font-size:9px;padding-bottom:14px}
+.ofw-pw b{color:#8e97b5}
+.ofw-splash{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px}
+.ofw-splash .logo{font-family:var(--font);font-weight:800;font-size:26px;color:#fff;letter-spacing:-.5px}
+.ofw-splash .pill{background:#fff;color:#111;border-radius:100px;padding:10px 26px;font-size:11.5px;font-weight:700;font-family:var(--font);margin-bottom:8px}
+.ofw-amt{padding:4px 16px 14px}
+.ofw-amt .k{font-size:12.5px;color:#c8cee2;margin-bottom:4px}
+.ofw-amt .v{font-family:var(--mono);font-size:24px;font-weight:700;color:#fff}
+.ofw-sec{padding:0 16px}
+.ofw-sec .st{font-size:10px;color:#8e97b5;font-weight:700;letter-spacing:.6px;margin:12px 0 7px}
+.ofw-kv{display:flex;justify-content:space-between;gap:10px;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.05);font-size:10.5px}
+.ofw-kv .k{color:#8e97b5}
+.ofw-kv .v{color:#e6e9f5;text-align:right}
+.ofw-acts{padding:16px;display:flex;flex-direction:column;gap:8px;margin-top:auto}
+.ofw-acts .a{text-align:center;padding:11px;border-radius:9px;font-family:var(--font);font-weight:700;font-size:12px;cursor:pointer}
+.ofw-acts .a.pri{background:#7b2fe0;color:#fff}
+.ofw-acts .a.sec{background:#1d212c;color:#c8cee2}
+.ofw-pin{flex:1;display:flex;flex-direction:column;justify-content:center;padding:0 22px;text-align:left}
+.ofw-pin h5{font-family:var(--font);font-size:15px;color:#fff;font-weight:700;margin-bottom:8px}
+.ofw-pin p{font-size:11px;color:#8e97b5;line-height:1.5;margin-bottom:26px}
+.ofw-dots{display:flex;gap:16px;justify-content:center}
+.ofw-dots i{width:9px;height:9px;border-radius:50%;background:#2c3040;transition:background .2s,transform .2s}
+.ofw-dots i.f{background:#fff;transform:scale(1.15)}
+.ofw-hop{display:flex;align-items:center;justify-content:center;gap:12px;padding:26px 0 18px}
+.ofw-hop .ic{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:17px;color:#fff}
+.ofw-hop .ar{color:#8e97b5;font-size:14px}
+.ofw-rd{padding:0 20px}
+.ofw-rd h5{font-family:var(--font);font-size:17px;color:#fff;font-weight:700;margin-bottom:9px}
+.ofw-rd p{font-size:10.8px;color:#8e97b5;line-height:1.55;margin-bottom:8px}
+.ofw-step{display:flex;align-items:center;gap:9px;background:#14161d;border:1px solid rgba(255,255,255,.07);
+  border-radius:10px;padding:10px 12px;margin-top:9px;font-size:11px;color:#c8cee2;opacity:.35;transition:opacity .3s}
+.ofw-step.on{opacity:1}
+.ofw-step .ck{width:19px;height:19px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;flex:0 0 auto}
+.ofw-step .ck.g{background:rgba(0,224,122,.15);color:#00e07a}
+.ofw-step .ck.b{background:rgba(123,47,224,.2);color:#b98cff}
+.ofw-of{text-align:center;color:#5d6480;font-size:9.5px;padding:22px 0 16px;margin-top:auto;letter-spacing:.5px}
+.of-btn{cursor:pointer}
+.of-btn:hover{background:rgba(43,143,255,.14)}
+.of-replay{font-size:10px;color:var(--dim);text-align:center;padding:6px 0 0;cursor:pointer}
+.of-replay:hover{color:var(--blip)}
+
+/* pix code block */
+.pix{display:block;font-family:var(--mono);font-size:9.5px;line-height:1.5;word-break:break-all;overflow-wrap:anywhere;background:#0a1120;border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:9px 10px;color:#9fbcff;margin-top:9px}
+.pix .cop{display:block;margin-top:6px;color:#7ff0b8;font-family:var(--font);font-size:10.5px;font-weight:700}
+
+/* flow overlay for whatsapp flows */
+.flow-overlay{position:absolute;inset:0;background:rgba(0,0,0,.4);z-index:60;opacity:0;pointer-events:none;transition:.3s;border-radius:36px}
+.flow-overlay.open{opacity:1;pointer-events:auto}
+.flow-modal{position:absolute;bottom:0;left:0;right:0;height:82%;background:#fff;border-radius:16px 16px 0 0;z-index:70;
+  transform:translateY(100%);transition:transform .4s cubic-bezier(.17,.88,.32,1.2);display:flex;flex-direction:column;overflow:hidden}
+.flow-modal.open{transform:translateY(0)}
+.flow-modal .fm-head{padding:11px 14px;border-bottom:1px solid #e8e8e8;display:flex;align-items:center;justify-content:space-between}
+.flow-modal .fm-head h4{flex:1;text-align:center;font-size:13px;font-weight:700;color:#111}
+.flow-modal .fm-head .cls{font-size:16px;cursor:pointer;color:#667781;padding:2px 6px}
+.flow-modal .fm-body{flex:1;overflow-y:auto;padding:16px 14px}
+.flow-modal .fm-body label{display:block;font-size:9.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#667781;margin-bottom:4px;margin-top:12px}
+.flow-modal .fm-body label:first-child{margin-top:0}
+.flow-modal .fm-body input{width:100%;padding:9px;font-size:12.5px;border:none;border-bottom:2px solid #e0e0e0;background:#f8f8f8;border-radius:6px 6px 0 0;outline:none;font-family:inherit;color:#111;transition:.2s}
+.flow-modal .fm-body input:focus{border-bottom-color:#128C7E;background:#f0faf7}
+.flow-modal .fm-foot{padding:10px 14px 20px;border-top:1px solid #eee}
+.flow-modal .fm-foot button{width:100%;padding:9px;border-radius:24px;background:#128C7E;color:#fff;font-size:12.5px;font-weight:700;border:none;cursor:pointer;font-family:inherit;transition:.15s}
+.flow-modal .fm-foot button:hover{background:#016d5a}
 </style>
 </head>
 <body>
@@ -398,6 +562,7 @@ footer b{color:var(--mute)}
     <a href="#studio-hub">Orquestração</a>
     <a href="#arch">Arquitetura</a>
     <a href="#vantagens">Vantagens</a>
+    <a href="#checkout-mockups">Checkout</a>
     <a href="#jornada">Jornada</a>
     <a href="#operacao">Brain</a>
     <a href="javascript:void(0)" onclick="document.getElementById('dxPage').classList.add('open');document.body.style.overflow='hidden'" style="background:rgba(226,0,26,.15);border:1px solid rgba(226,0,26,.4);border-radius:8px;padding:4px 12px;color:#ff6b6b">De × Para</a>
@@ -649,6 +814,107 @@ footer b{color:var(--mute)}
       <div class="kw">📊 Visibilidade e controle</div>
       <div class="kw">🔄 Evolução contínua</div>
       <div class="kw">💰 Conversão e receita</div>
+    </div>
+  </div>
+</section>
+
+<!-- CHECKOUT MOCKUPS AS IS / TO BE -->
+<section id="checkout-mockups">
+  <div class="wrap">
+    <div class="eyebrow rv">Jornada de compra</div>
+    <h1 class="rv ck-section-title">Do catálogo ao <span class="hl">checkout</span> sem sair do <span class="hl-r">WhatsApp.</span></h1>
+    <p class="lead rv">Compare a jornada atual com a experiência que o Blip Studio pode entregar — pagamento nativo, upsell inteligente e zero redirecionamento.</p>
+
+    <div class="mock-pair rv">
+      <!-- AS IS -->
+      <div class="mock-col">
+        <div class="mock-label asis">As Is · Hoje</div>
+        <div class="mock-desc">O cliente é redirecionado para o e-commerce, precisa fazer login e finalizar fora do WhatsApp. Perda de conversão a cada clique.</div>
+        <div class="phone-frame" style="height:580px">
+          <div class="phone-screen">
+            <div class="phone-notch"><i></i><b></b><i></i></div>
+            <div class="wa-screen">
+              <div class="wa-header">
+                <div class="wa-avatar">A</div>
+                <div><div class="wa-contact-name">Drogaria Araujo</div><div class="wa-contact-status">online</div></div>
+              </div>
+              <div class="wa-body" id="asisBody">
+                <div class="wa-date-chip">Hoje</div>
+                <div class="msg msg-out"><strong>Oi!</strong> Quero comprar o Protetor Solar La Roche-Posay<span class="msg-time">10:01 ✓✓</span></div>
+                <div class="msg msg-in">Ótima escolha! 🌞 Encontrei o produto para você:<br><br>☀️ <strong>La Roche-Posay Anthelios FPS 70</strong><br>💰 R$ 89,90<span class="msg-time">10:01</span></div>
+                <div class="msg msg-out">Quero esse! Como faço?<span class="msg-time">10:02 ✓✓</span></div>
+                <div class="msg msg-in">Clique no link abaixo para finalizar sua compra no nosso site:<br><br>🔗 <a href="javascript:void(0)" id="asisLink" style="color:#00A5F4;text-decoration:underline;cursor:pointer;font-weight:600">araujo.com.br/checkout/ps70</a><span class="msg-time">10:02</span></div>
+              </div>
+              <div class="wa-input-bar">
+                <div class="inp">Mensagem</div>
+                <div class="mic"><svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 003-3V5a3 3 0 00-6 0v6a3 3 0 003 3z"/></svg></div>
+              </div>
+            </div>
+            <!-- Site Overlay -->
+            <div class="site-overlay" id="siteOverlay">
+              <div class="site-bar">
+                <span class="sb-back" id="siteBack">‹</span>
+                <div class="sb-url"><span class="lock">🔒</span> araujo.com.br/checkout</div>
+              </div>
+              <div class="site-body" id="sitePages">
+                <!-- Pages will be injected by JS -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TO BE -->
+      <div class="mock-col">
+        <div class="mock-label tobe">To Be · Com Blip Studio</div>
+        <div class="mock-desc">Jornada completa dentro do WhatsApp — upsell, formulário nativo, pagamento via Pix ou Open Finance. Zero fricção.</div>
+        <div class="phone-frame tall" id="tobePhone" style="height:580px">
+          <div class="phone-screen">
+            <div class="phone-notch"><i></i><b></b><i></i></div>
+            <div class="wa-screen">
+              <div class="wa-header">
+                <div class="wa-avatar" style="background:linear-gradient(135deg,var(--blip),#1fbf6e)">A</div>
+                <div><div class="wa-contact-name">Drogaria Araujo</div><div class="wa-contact-status">online · Blip Studio</div></div>
+              </div>
+              <div class="wa-body" id="tobeBody">
+                <div class="wa-date-chip">Hoje</div>
+              </div>
+              <div class="wa-input-bar">
+                <div class="inp">Mensagem</div>
+                <div class="mic"><svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 003-3V5a3 3 0 00-6 0v6a3 3 0 003 3z"/></svg></div>
+              </div>
+              <!-- Flow Modal -->
+              <div class="flow-overlay" id="tobeFlowOverlay"></div>
+              <div class="flow-modal" id="tobeFlowModal">
+                <div class="fm-head"><span class="cls" id="tobeFlowClose">✕</span><h4>Dados de entrega</h4><span style="width:20px"></span></div>
+                <div class="fm-body">
+                  <div style="display:flex;align-items:center;gap:6px;color:#075E54;margin-bottom:12px"><span>🚚</span><span style="font-size:11px;font-weight:700">WhatsApp Flow · Drogaria Araujo</span></div>
+                  <h3 style="font-size:16px;font-weight:700;color:#111;margin-bottom:4px">Informe seus dados</h3>
+                  <p style="font-size:11.5px;color:#667781;margin-bottom:14px">Preencha rapidinho para finalizarmos seu pedido.</p>
+                  <label>Nome completo</label>
+                  <input type="text" id="flowNome" placeholder="Seu nome">
+                  <label>E-mail</label>
+                  <input type="text" id="flowEmail" placeholder="seu@email.com">
+                  <label>CEP</label>
+                  <input type="text" id="flowCepTobe" placeholder="00000-000">
+                  <label>Endereço</label>
+                  <input type="text" id="flowEndTobe" placeholder="Rua, número, bairro">
+                </div>
+                <div class="fm-foot"><button id="tobeFlowSubmit">Enviar dados</button><p style="text-align:center;font-size:8.5px;color:#aaa;margin-top:6px">🔒 Dados criptografados via WhatsApp Flows</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="of-replay" id="tobeReplay" style="margin-top:8px">▶ Clique em <b>"Open Finance"</b> no chat para ver o fluxo completo · reiniciar</div>
+      </div>
+    </div>
+
+    <!-- BENEFITS -->
+    <div class="ck-benefits rv">
+      <div class="ck-ben"><div class="bi">🚀</div><h4>Jornada mais fluida</h4><p>O cliente não sai do WhatsApp em nenhum momento — da descoberta ao pagamento.</p></div>
+      <div class="ck-ben"><div class="bi">💳</div><h4>Checkout no canal</h4><p>Pix Copia e Cola e Open Finance nativos, sem link externo e sem relogin.</p></div>
+      <div class="ck-ben"><div class="bi">📈</div><h4>Maior conversão</h4><p>Menos etapas = menos abandono. Upsell inteligente aumenta o ticket médio.</p></div>
+      <div class="ck-ben"><div class="bi">🎯</div><h4>Upsell por IA</h4><p>O agente sugere produtos complementares no momento certo, com base no contexto da conversa.</p></div>
     </div>
   </div>
 </section>
@@ -1021,6 +1287,332 @@ var started=false;
 new IntersectionObserver(function(es){es.forEach(function(e){
   if(e.isIntersecting&&!started){started=true;run();}
 });},{root:scroller,threshold:.35}).observe(bd);
+})();
+
+/* ===== AS IS SITE OVERLAY ===== */
+(function(){
+"use strict";
+var link=document.getElementById('asisLink');
+var overlay=document.getElementById('siteOverlay');
+var backBtn=document.getElementById('siteBack');
+var pages=document.getElementById('sitePages');
+if(!link||!overlay) return;
+
+var step=0;
+var PAGE_LOGIN='<div class="site-logo"><span>Drogaria Araujo</span></div>'+
+  '<div class="site-steps"><div class="site-step active"><span class="sn">1</span>Login</div><span class="site-arr">→</span><div class="site-step"><span class="sn">2</span>Dados</div><span class="site-arr">→</span><div class="site-step"><span class="sn">3</span>Pagar</div></div>'+
+  '<h3>Acesse sua conta</h3><p>Faça login para continuar sua compra.</p>'+
+  '<label>E-mail ou CPF</label><input type="text" placeholder="Digite seu e-mail ou CPF">'+
+  '<label>Senha</label><input type="password" placeholder="••••••••">'+
+  '<button class="site-cta" id="siteLoginBtn">Entrar</button>'+
+  '<div class="site-divider">ou</div>'+
+  '<button class="site-cta" style="background:#3b5998" disabled>Entrar com Facebook</button>'+
+  '<p style="font-size:10px;color:#9ca3af;text-align:center;margin-top:10px">Não tem conta? <span style="color:#E2001A;font-weight:600">Cadastre-se</span></p>'+
+  '<div class="site-friction"><span class="fi">⚠️</span><span>O cliente precisa <strong>lembrar a senha</strong> ou criar conta do zero. <strong>Muitos abandonam aqui.</strong></span></div>';
+
+var PAGE_DADOS='<div class="site-logo"><span>Drogaria Araujo</span></div>'+
+  '<div class="site-steps"><div class="site-step done"><span class="sn">✓</span>Login</div><span class="site-arr">→</span><div class="site-step active"><span class="sn">2</span>Dados</div><span class="site-arr">→</span><div class="site-step"><span class="sn">3</span>Pagar</div></div>'+
+  '<h3>Endereço de entrega</h3><p>Confirme ou edite o endereço de entrega.</p>'+
+  '<label>CEP</label><input type="text" placeholder="00000-000">'+
+  '<label>Rua</label><input type="text" placeholder="Nome da rua">'+
+  '<label>Número</label><input type="text" placeholder="Ex: 120">'+
+  '<label>Complemento</label><input type="text" placeholder="Apt, bloco...">'+
+  '<label>Cidade / UF</label><input type="text" placeholder="Belo Horizonte / MG">'+
+  '<button class="site-cta" id="siteDadosBtn">Continuar para pagamento</button>'+
+  '<div class="site-friction"><span class="fi">⚠️</span><span>O cliente precisa <strong>preencher tudo de novo</strong> a cada compra. Mais uma barreira.</span></div>';
+
+var PAGE_PAGAR='<div class="site-logo"><span>Drogaria Araujo</span></div>'+
+  '<div class="site-steps"><div class="site-step done"><span class="sn">✓</span>Login</div><span class="site-arr">→</span><div class="site-step done"><span class="sn">✓</span>Dados</div><span class="site-arr">→</span><div class="site-step active"><span class="sn">3</span>Pagar</div></div>'+
+  '<h3>Pagamento</h3><p>Escolha a forma de pagamento e finalize.</p>'+
+  '<div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:10px;padding:12px;margin-bottom:12px">'+
+    '<div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:6px"><span style="color:#6b7280">Protetor Solar FPS 70</span><span style="font-weight:700">R$ 89,90</span></div>'+
+    '<div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:6px"><span style="color:#6b7280">Frete</span><span style="font-weight:700">R$ 12,90</span></div>'+
+    '<div style="display:flex;justify-content:space-between;font-size:13px;font-weight:800;border-top:1px dashed #e5e7eb;padding-top:8px;margin-top:6px"><span>Total</span><span style="color:#E2001A">R$ 102,80</span></div>'+
+  '</div>'+
+  '<label>Número do cartão</label><input type="text" placeholder="0000 0000 0000 0000">'+
+  '<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><div><label>Validade</label><input type="text" placeholder="MM/AA"></div><div><label>CVV</label><input type="text" placeholder="000"></div></div>'+
+  '<label>Nome no cartão</label><input type="text" placeholder="NOME COMPLETO">'+
+  '<button class="site-cta" id="sitePayBtn">Finalizar compra</button>'+
+  '<div class="site-friction"><span class="fi">⚠️</span><span><strong>3 telas, 12+ campos</strong> preenchidos. No To Be, tudo acontece em <strong>3 toques no WhatsApp</strong>.</span></div>';
+
+function showPage(n){
+  step=n;
+  if(n===0) pages.innerHTML=PAGE_LOGIN;
+  else if(n===1) pages.innerHTML=PAGE_DADOS;
+  else pages.innerHTML=PAGE_PAGAR;
+  pages.scrollTop=0;
+  // bind next
+  var lb=document.getElementById('siteLoginBtn');
+  var db=document.getElementById('siteDadosBtn');
+  var pb=document.getElementById('sitePayBtn');
+  if(lb) lb.addEventListener('click',function(){showPage(1);});
+  if(db) db.addEventListener('click',function(){showPage(2);});
+  if(pb) pb.addEventListener('click',function(){
+    pb.disabled=true;pb.textContent='Processando...';
+    setTimeout(function(){overlay.classList.remove('open');step=0;},1500);
+  });
+}
+
+link.addEventListener('click',function(){
+  showPage(0);
+  overlay.classList.add('open');
+});
+backBtn.addEventListener('click',function(){
+  if(step>0) showPage(step-1);
+  else overlay.classList.remove('open');
+});
+})();
+
+/* ===== TO BE CHECKOUT MOCKUP ===== */
+(function(){
+"use strict";
+var body=document.getElementById('tobeBody');
+var phone=document.getElementById('tobePhone');
+if(!body||!phone) return;
+
+var timers=[];
+function later(fn,ms){timers.push(setTimeout(fn,ms));}
+function delay(ms){return new Promise(function(r){later(r,ms)});}
+
+function addMsg(html,type){
+  var d=document.createElement('div');
+  d.className='msg '+(type==='user'?'msg-out':'msg-in');
+  d.innerHTML=html+'<span class="msg-time">'+(type==='user'?'10:01 ✓✓':'10:01')+'</span>';
+  d.style.opacity='0';d.style.transform='translateY(6px)';
+  body.appendChild(d);
+  requestAnimationFrame(function(){d.style.transition='all .3s';d.style.opacity='1';d.style.transform='none';});
+  body.scrollTop=body.scrollHeight;
+  return d;
+}
+
+function addBtns(btns){
+  var wrap=document.createElement('div');wrap.className='wa-btn-row';wrap.style.opacity='0';wrap.style.transform='translateY(6px)';
+  var bw=document.createElement('div');bw.className='wa-btns';
+  btns.forEach(function(b){
+    var btn=document.createElement('button');btn.className='wa-btn';
+    if(b.cls) btn.classList.add(b.cls);
+    btn.textContent=b.text;
+    btn.addEventListener('click',function(){
+      wrap.style.pointerEvents='none';wrap.style.opacity='.4';
+      b.fn();
+    });
+    bw.appendChild(btn);
+  });
+  wrap.appendChild(bw);body.appendChild(wrap);
+  requestAnimationFrame(function(){wrap.style.transition='all .3s';wrap.style.opacity='1';wrap.style.transform='none';});
+  body.scrollTop=body.scrollHeight;
+}
+
+/* Flow overlay */
+var flowOverlay=document.getElementById('tobeFlowOverlay');
+var flowModal=document.getElementById('tobeFlowModal');
+document.getElementById('tobeFlowClose').onclick=function(){flowOverlay.classList.remove('open');flowModal.classList.remove('open');};
+flowOverlay.onclick=function(){flowOverlay.classList.remove('open');flowModal.classList.remove('open');};
+
+function openFlow(){flowOverlay.classList.add('open');flowModal.classList.add('open');}
+function closeFlow(){flowOverlay.classList.remove('open');flowModal.classList.remove('open');}
+
+document.getElementById('tobeFlowSubmit').onclick=function(){
+  closeFlow();
+  addMsg('📋 Dados enviados via formulário','user');
+  delay(1200).then(function(){
+    addMsg('Perfeito! Seus dados foram recebidos ✅<br><br>Resumo do pedido:<br>☀️ Anthelios FPS 70 — R$ 89,90<br>💊 Vitamina D — R$ 34,90<br>🚚 Frete — R$ 8,90<br><br><strong>Total: R$ 133,70</strong><br><br>Como você quer pagar?');
+    return delay(600);
+  }).then(function(){
+    addBtns([
+      {text:'💠 Pix Copia e Cola',fn:doPix},
+      {text:'🏦 Open Finance',cls:'of-btn',fn:doOpenFinance}
+    ]);
+  });
+};
+
+function doPix(){
+  addMsg('Pix Copia e Cola','user');
+  delay(1000).then(function(){
+    var m=addMsg('Aqui está sua chave PIX ⏱️ Válida por 15 minutos:<span class="pix">00020126580014BR.GOV.BCB.PIX0136araujo-pay-8f21ab...5204000053039865406133.705802BR5913DROGARAUJO6009SAOPAULO62070503***6304C3D4<span class="cop">⧉ Copiar código</span></span>');
+    return delay(800);
+  }).then(function(){
+    addBtns([{text:'✅ Simular pagamento',fn:function(){
+      addMsg('Pagamento realizado','user');
+      delay(1200).then(function(){
+        addMsg('🎉 Pagamento confirmado!<br><br>Seu pedido já está sendo separado. Código de rastreio: <strong>AR987654321</strong>.<br><br>Obrigado por comprar na Araujo! 💚');
+      });
+    }}]);
+  });
+}
+
+function doOpenFinance(){
+  addMsg('Pagar com banco (Open Finance)','user');
+  delay(300).then(function(){ initOF(); });
+}
+
+/* Open Finance flow */
+function initOF(){
+  if(phone.querySelector('.ofw')){phone.querySelector('.ofw').classList.add('on');return;}
+  var BANKS=[{n:'Nubank',c:'#820ad1',i:'N'},{n:'Caixa',c:'#0070af',i:'C'},{n:'Santander',c:'#ec0000',i:'S'},{n:'Itaú',c:'#ec7000',i:'I'}];
+  var OTHERS=['99Pay','Banco do Brasil','Bradesco','Inter','C6 Bank'];
+  var bank=BANKS[0];
+  var banks=BANKS.map(function(b,i){return '<div class="ofb" data-b="'+i+'"><div class="mk" style="background:'+b.c+'">'+b.i+'</div><div class="nm">'+b.n+'</div></div>';}).join('');
+  var rows=OTHERS.map(function(o){return '<div class="ofr"><div class="mk">'+o[0]+'</div><div class="nm">'+o+'</div></div>';}).join('');
+  var ofw=document.createElement('div');ofw.className='ofw on';
+  ofw.innerHTML='<div class="ofw-status"><span>17:20</span><span class="rgt">▮▮▮ ▾ ▰</span></div><div class="ofw-scr">'
+    +'<div class="ofs" data-s="1" style="display:flex;flex-direction:column;flex:1"><div class="ofw-bar"><span class="bk of-close">‹</span><span class="ttl">Pagar com Pix</span></div><div class="ofw-search">🔍 Busque o seu banco</div><div class="ofw-lbl">Bancos populares</div><div class="ofw-banks">'+banks+'</div><div class="ofw-lbl">Outros</div><div class="ofw-rows">'+rows+'</div><div class="ofw-cta"><div class="ofw-btn dis of-pay1">Selecione um banco</div><div class="ofw-btn ghost">Copiar código Pix</div></div></div>'
+    +'<div class="ofs" data-s="2" style="display:none;flex-direction:column;flex:1"><div class="ofw-bar"><span class="bk of-close">‹</span><span class="ttl">Pagar com Pix</span></div><div class="ofw-card"><div class="hd"><span class="k">ENVIAR PARA</span></div><div class="bd"><div class="mk">💊</div><div><div class="nm">Drogaria Araujo</div><div class="ln">Nome: DROGARIA ARAUJO S.A.</div><div class="ln">CNPJ: 17.590.396/0001-30</div></div></div><div class="hd" style="border-top:1px solid rgba(255,255,255,.06)"><span class="k">PAGANDO COM</span><span class="lnk">Alterar</span></div><div class="bd"><div class="mk of-bmk"></div><div><div class="nm of-bnm"></div><div class="ln">Conta corrente · Open Finance</div></div></div><div class="ofw-tot"><span class="k">Total</span><span class="v">R$ 133,70</span></div></div><div class="ofw-fine">Confirme que o app do seu banco está instalado.</div><div class="ofw-cta" style="margin-top:auto"><div class="ofw-btn of-pay2">Pagar no <span class="of-bnm2"></span></div></div><div class="ofw-pw">Powered by <b>Open Finance</b></div></div>'
+    +'<div class="ofs" data-s="3" style="display:none;flex-direction:column;flex:1"><div class="ofw-splash of-splash"><div class="logo of-bnm3"></div><div class="pill">Usar senha do celular</div></div></div>'
+    +'<div class="ofs" data-s="4" style="display:none;flex-direction:column;flex:1"><div class="ofw-bar"><span class="bk of-close">✕</span></div><div class="ofw-amt"><div class="k">Pagando</div><div class="v">R$ 133,70</div></div><div class="ofw-sec"><div class="st">TITULAR</div><div class="ofw-kv"><span class="k">Nome</span><span class="v">Maria Silva</span></div><div class="ofw-kv"><span class="k">CPF</span><span class="v">•••.412.870-••</span></div><div class="ofw-kv"><span class="k">Tipo</span><span class="v">Pix</span></div><div class="ofw-kv"><span class="k">Quando</span><span class="v">Hoje</span></div><div class="ofw-kv"><span class="k">Iniciado em</span><span class="v">WhatsApp</span></div><div class="st">DESTINO</div><div class="ofw-kv"><span class="k">Nome</span><span class="v">DROGARIA ARAUJO S.A.</span></div></div><div class="ofw-acts"><div class="a pri of-auth">Autorizar</div><div class="a sec of-close">Cancelar</div></div></div>'
+    +'<div class="ofs" data-s="5" style="display:none;flex-direction:column;flex:1"><div class="ofw-bar"><span class="bk of-close">‹</span></div><div class="ofw-pin"><h5>Digite sua senha de 4 dígitos</h5><p>Essa é a mesma senha de 4 dígitos do seu cartão.</p><div class="ofw-dots"><i></i><i></i><i></i><i></i></div></div></div>'
+    +'<div class="ofs" data-s="6" style="display:none;flex-direction:column;flex:1"><div class="ofw-hop"><div class="ic of-bic"></div><div class="ar">→</div><div class="ic" style="background:#25d366">✆</div></div><div class="ofw-rd"><h5>Redirecionando…</h5><p>Etapa segura via Open Finance.</p><div class="ofw-step s1"><span class="ck g">✓</span>Transferência autorizada</div><div class="ofw-step s2"><span class="ck b">→</span>Voltando para o WhatsApp</div></div><div class="ofw-of">open finance</div></div>'
+    +'</div>';
+  phone.appendChild(ofw);
+
+  var steps=ofw.querySelectorAll('.ofs');
+  var otimers=[];
+  function olater(fn,ms){otimers.push(setTimeout(fn,ms));}
+  function show(n){steps.forEach(function(s){s.style.display=(s.dataset.s==String(n)?'flex':'none');});}
+  function paintBank(){
+    ofw.querySelector('.of-bmk').textContent=bank.i;ofw.querySelector('.of-bmk').style.background=bank.c;
+    ofw.querySelector('.of-bnm').textContent=bank.n;ofw.querySelector('.of-bnm2').textContent=bank.n;
+    ofw.querySelector('.of-bnm3').textContent=bank.n;
+    ofw.querySelector('.of-splash').style.background=bank.c;
+    var bic=ofw.querySelector('.of-bic');bic.textContent=bank.i;bic.style.background=bank.c;
+  }
+  function ofClose(){otimers.forEach(clearTimeout);otimers=[];ofw.classList.remove('on');show(1);reset1();}
+  function reset1(){
+    ofw.querySelectorAll('.ofb').forEach(function(b){b.classList.remove('sel');});
+    var p=ofw.querySelector('.of-pay1');p.classList.add('dis');p.textContent='Selecione um banco';
+    ofw.querySelectorAll('.ofw-dots i').forEach(function(d){d.classList.remove('f');});
+    ofw.querySelectorAll('.ofw-step').forEach(function(s){s.classList.remove('on');});
+  }
+  ofw.querySelectorAll('.ofb').forEach(function(el){
+    el.addEventListener('click',function(){
+      ofw.querySelectorAll('.ofb').forEach(function(b){b.classList.remove('sel');});
+      el.classList.add('sel');bank=BANKS[+el.dataset.b];paintBank();
+      var p=ofw.querySelector('.of-pay1');p.classList.remove('dis');p.textContent='Pagar no '+bank.n;
+    });
+  });
+  ofw.querySelector('.of-pay1').addEventListener('click',function(){if(this.classList.contains('dis'))return;show(2);});
+  ofw.querySelector('.of-pay2').addEventListener('click',function(){show(3);olater(function(){show(4);},1400);});
+  ofw.querySelector('.of-auth').addEventListener('click',function(){
+    show(5);
+    var dots=ofw.querySelectorAll('.ofw-dots i');
+    dots.forEach(function(d,i){olater(function(){d.classList.add('f');},320*(i+1));});
+    olater(function(){
+      show(6);
+      olater(function(){ofw.querySelector('.ofw-step.s1').classList.add('on');},500);
+      olater(function(){ofw.querySelector('.ofw-step.s2').classList.add('on');},1200);
+      olater(function(){
+        ofClose();
+        if(!phone.dataset.paid){
+          phone.dataset.paid='1';
+          addMsg('Pagamento de <strong>R$ 133,70</strong> confirmado! ✅ Recebemos via Open Finance — sem copiar código nenhum.');
+          delay(800).then(function(){addMsg('Seu pedido já está sendo separado. Código: <strong>AR987654321</strong>. Obrigado por comprar na Araujo! 💚');});
+        }
+        body.scrollTop=body.scrollHeight;
+      },2600);
+    },1700);
+  });
+  ofw.querySelectorAll('.of-close').forEach(function(el){el.addEventListener('click',ofClose);});
+  paintBank();
+}
+
+/* Start the To Be demo when section is visible */
+var started2=false;
+var sec2=document.getElementById('checkout-mockups');
+if(sec2){
+  new IntersectionObserver(function(es){es.forEach(function(e){
+    if(e.isIntersecting&&!started2){
+      started2=true;
+      delay(400).then(function(){
+        addMsg('<strong>Oi!</strong> Quero comprar o Protetor Solar La Roche-Posay','user');
+        return delay(1300);
+      }).then(function(){
+        addMsg('Ótima escolha! 🌞 Encontrei para você:<br><br>☀️ <strong>La Roche-Posay Anthelios FPS 70</strong><br>💰 R$ 89,90');
+        return delay(1400);
+      }).then(function(){
+        addBtns([{text:'✅ Quero esse!',fn:function(){
+          addMsg('Quero esse!','user');
+          delay(1200).then(function(){
+            addMsg('Excelente! 🛒 E já que você está levando protetor solar, que tal adicionar também?<br><br>💊 <strong>Vitamina D 2000 UI</strong> — R$ 34,90<br><em>Complemento perfeito para quem se protege do sol!</em>');
+            return delay(600);
+          }).then(function(){
+            addBtns([
+              {text:'👍 Adicionar ao carrinho',fn:function(){
+                addMsg('Adicionar ao carrinho!','user');
+                delay(1000).then(function(){
+                  addMsg('Adicionado! 🛒<br>Agora preciso de algumas informações para finalizar. Clique abaixo para preencher rapidinho:');
+                  return delay(600);
+                }).then(function(){
+                  addBtns([{text:'📋 Informar dados de entrega',fn:function(){
+                    this.closest&&this.closest('.wa-btn-row')&&(this.closest('.wa-btn-row').style.pointerEvents='none');
+                    openFlow();
+                  }}]);
+                });
+              }},
+              {text:'Não, obrigado',fn:function(){
+                addMsg('Não, obrigado','user');
+                delay(1000).then(function(){
+                  addMsg('Sem problema! Preciso de algumas informações para finalizar. Clique abaixo:');
+                  return delay(600);
+                }).then(function(){
+                  addBtns([{text:'📋 Informar dados de entrega',fn:function(){openFlow();}}]);
+                });
+              }}
+            ]);
+          });
+        }}]);
+      });
+    }
+  });},{root:document.getElementById('scroller'),threshold:.25}).observe(sec2);
+}
+
+/* Replay button */
+var rp=document.getElementById('tobeReplay');
+if(rp) rp.addEventListener('click',function(){
+  delete phone.dataset.paid;
+  var existingOfw=phone.querySelector('.ofw');
+  if(existingOfw) existingOfw.remove();
+  body.innerHTML='<div class="wa-date-chip">Hoje</div>';
+  started2=false;
+  timers.forEach(clearTimeout);timers=[];
+  /* re-trigger */
+  started2=true;
+  delay(400).then(function(){
+    addMsg('<strong>Oi!</strong> Quero comprar o Protetor Solar La Roche-Posay','user');
+    return delay(1300);
+  }).then(function(){
+    addMsg('Ótima escolha! 🌞 Encontrei para você:<br><br>☀️ <strong>La Roche-Posay Anthelios FPS 70</strong><br>💰 R$ 89,90');
+    return delay(1400);
+  }).then(function(){
+    addBtns([{text:'✅ Quero esse!',fn:function(){
+      addMsg('Quero esse!','user');
+      delay(1200).then(function(){
+        addMsg('Excelente! 🛒 E já que você está levando protetor solar, que tal adicionar também?<br><br>💊 <strong>Vitamina D 2000 UI</strong> — R$ 34,90<br><em>Complemento perfeito para quem se protege do sol!</em>');
+        return delay(600);
+      }).then(function(){
+        addBtns([
+          {text:'👍 Adicionar ao carrinho',fn:function(){
+            addMsg('Adicionar ao carrinho!','user');
+            delay(1000).then(function(){
+              addMsg('Adicionado! 🛒<br>Agora preciso de algumas informações para finalizar. Clique abaixo para preencher rapidinho:');
+              return delay(600);
+            }).then(function(){
+              addBtns([{text:'📋 Informar dados de entrega',fn:function(){openFlow();}}]);
+            });
+          }},
+          {text:'Não, obrigado',fn:function(){
+            addMsg('Não, obrigado','user');
+            delay(1000).then(function(){
+              addMsg('Sem problema! Preciso de algumas informações. Clique abaixo:');
+              return delay(600);
+            }).then(function(){
+              addBtns([{text:'📋 Informar dados de entrega',fn:function(){openFlow();}}]);
+            });
+          }}
+        ]);
+      });
+    }}]);
+  });
+});
 })();
 </script>
 </body>
