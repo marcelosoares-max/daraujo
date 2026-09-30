@@ -214,6 +214,104 @@ section.in .rv:nth-child(5){transition-delay:.28s}
 .rlw{font-size:13px;color:var(--mute);line-height:1.5}
 .rlc{font-size:12px;color:var(--dim);line-height:1.45;margin-top:4px;border-left:2px solid rgba(0,150,250,.3);padding-left:10px}
 
+/* jornada detalhada · deep-dive blocks (dark theme) */
+.deep{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center;margin-top:40px}
+.deep.rev{grid-template-columns:.95fr 1.05fr}
+.deep.rev .deep-txt{order:2}.deep.rev .deep-vis{order:1}
+@media(max-width:940px){.deep,.deep.rev{grid-template-columns:1fr;gap:30px}.deep.rev .deep-txt,.deep.rev .deep-vis{order:0}}
+.stepnum{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:12px;font-weight:700;color:var(--blip);margin-bottom:8px}
+.stepnum .cir{width:26px;height:26px;border-radius:50%;background:var(--blip);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800}
+.stepnum .prod{color:var(--dim);font-weight:600;letter-spacing:.02em}
+.deep h3{font-size:clamp(20px,2.3vw,28px);margin:6px 0 6px;line-height:1.14;font-family:var(--font);color:#fff}
+.deep .desc{font-size:14.5px;color:var(--mute);line-height:1.62;margin-bottom:6px}
+.deep .desc b{color:var(--text);font-weight:600}
+.exstack{display:flex;flex-direction:column;gap:14px;margin-top:20px}
+.ex-dk{border:1px solid var(--border);background:var(--card);border-radius:18px;padding:24px 26px}
+.ex-dk p{font-size:14.5px;line-height:1.62;color:var(--mute)}
+.ex-dk p b{color:var(--text);font-weight:600}
+.exh-dk{font-family:var(--font);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--dim);margin-bottom:13px}
+.ex-dk.gain{background:linear-gradient(155deg,rgba(0,150,250,.08),rgba(255,255,255,.02));border-color:rgba(0,150,250,.3)}
+.ex-dk.gain .exh-dk{color:var(--blip)}
+.ex-dk ol.steps{margin:2px 0 0 0;padding-left:18px;display:flex;flex-direction:column;gap:8px}
+.ex-dk ol.steps li{font-size:13.5px;color:var(--mute);line-height:1.5}
+.ex-dk ol.steps li b{color:var(--text);font-weight:600}
+.gchips-dk{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
+.gchips-dk span{font-size:10.5px;font-weight:600;padding:5px 10px;border-radius:8px;background:rgba(0,150,250,.12);color:#7fb4ff}
+.gchips-dk span.go{background:rgba(242,169,23,.12);color:var(--amber)}
+.gchips-dk span.gr{background:rgba(31,191,110,.12);color:var(--green)}
+/* X card (dark) */
+.xcard-dk{background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,.5);max-width:460px;margin:0 auto;overflow:hidden;font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif}
+.xcard-dk .xtop{display:flex;align-items:center;gap:8px;padding:11px 16px;border-bottom:1px solid var(--border)}
+.xcard-dk .xtop .xdotwrap{display:flex;gap:6px}
+.xcard-dk .xtop .xdotwrap i{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.15);display:block}
+.xcard-dk .xtop .xurl{margin:0 auto;font-size:12px;color:var(--dim);font-weight:500}
+.xcard-dk .xpost{padding:16px 18px 6px}
+.xcard-dk .xhead{display:flex;gap:11px}
+.xcard-dk .xav{width:46px;height:46px;border-radius:50%;flex:0 0 auto;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:16px}
+.xcard-dk .xav.marcelo{background:linear-gradient(135deg,#6C7A93,#3E4A61)}
+.xcard-dk .xav.araujo{background:linear-gradient(135deg,var(--araujo),var(--araujo-dk))}
+.xcard-dk .xnamewrap{min-width:0}
+.xcard-dk .xname-row{display:flex;align-items:center;gap:4px;font-size:15px;font-weight:800;color:var(--text);flex-wrap:wrap}
+.xcard-dk .xcheck{width:16px;height:16px;flex:0 0 auto}
+.xcard-dk .xhandle{color:var(--dim);font-size:14.5px;font-weight:400}
+.xcard-dk .xmeta{color:var(--dim);font-size:14.5px}
+.xcard-dk .xmore{margin-left:auto;color:var(--dim);font-size:17px;padding:0 4px}
+.xcard-dk .xbody-txt{margin-top:8px;font-size:15.5px;line-height:1.42;color:var(--text)}
+.xcard-dk .xtime{font-size:13.5px;color:var(--dim);margin-top:12px}
+.xcard-dk .xstats{display:flex;gap:26px;padding:12px 18px 14px;margin-top:6px;border-top:1px solid var(--border);color:var(--dim);font-size:13px}
+.xcard-dk .xstats span{display:flex;align-items:center;gap:6px}
+.xcard-dk .xstats svg{width:16px;height:16px}
+.xcard-dk .xreply-wrap{position:relative;padding:0 18px 18px;border-top:1px solid var(--border)}
+.xcard-dk .xreply-line{position:absolute;left:41px;top:0;width:2px;height:20px;background:var(--border)}
+.xcard-dk .xreply{display:flex;gap:11px;padding-top:16px}
+.xcard-dk .xreply .xbody-txt{margin-top:6px}
+.xcard-dk .xlinkcard{margin-top:11px;border:1px solid var(--border);border-radius:14px;overflow:hidden;display:flex;align-items:center;gap:11px;padding:10px 12px;background:rgba(255,255,255,.04);cursor:pointer}
+.xcard-dk .xlinkcard .xlk-ic{width:36px;height:36px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.xcard-dk .xlinkcard .xlk-ic svg{width:19px;height:19px;fill:#fff}
+.xcard-dk .xlinkcard .xlk-t{font-size:13.5px;font-weight:700;color:var(--text);line-height:1.3}
+.xcard-dk .xlinkcard .xlk-d{font-size:12px;color:var(--dim);margin-top:1px}
+.xcap-dk{text-align:center;font-size:11.5px;color:var(--dim);margin-top:14px;font-weight:500}
+/* copilot (dark) */
+.copilot-dk{background:rgba(255,255,255,.04);border-radius:14px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.5);border:1px solid var(--border);max-width:360px;margin:0 auto}
+.copilot-dk .ch{background:linear-gradient(90deg,var(--blip),#1968F0);color:#fff;padding:11px 14px;font-size:12.5px;font-weight:700;display:flex;align-items:center;gap:7px}
+.copilot-dk .cb{padding:14px 16px;font-size:11.5px;color:var(--mute);line-height:1.6}
+.copilot-dk .lb{font-size:9px;font-weight:800;letter-spacing:.08em;color:var(--dim);text-transform:uppercase;margin:10px 0 4px}
+.copilot-dk .lb:first-child{margin-top:0}
+.copilot-dk .chips{display:flex;gap:5px;flex-wrap:wrap}
+.copilot-dk .chip{font-size:9.5px;font-weight:600;padding:2px 8px;border-radius:99px}
+.copilot-dk .chip.r{background:rgba(236,91,91,.15);color:#ec5b5b}.copilot-dk .chip.y{background:rgba(242,169,23,.15);color:var(--amber)}
+.copilot-dk .sugg{color:#7fb4ff;font-style:italic;background:rgba(0,150,250,.08);border-radius:9px;padding:9px 11px;border:1px solid rgba(0,150,250,.22)}
+.copilot-dk .cf{border-top:1px solid var(--border);padding:9px 14px;display:flex;gap:6px;flex-wrap:wrap}
+.copilot-dk .cf span{font-size:9.5px;border:1px solid var(--border);border-radius:99px;padding:4px 9px;color:var(--dim)}
+/* deep phone frame (light WA inside dark) */
+.deep .phone-frame-lt{width:310px;max-width:100%;height:560px;background:#0A0A0A;border-radius:40px;padding:6px;overflow:hidden;position:relative;box-shadow:0 0 0 2px #1d1d1d,0 40px 80px -24px rgba(0,0,0,.55);margin:0 auto}
+.deep .phone-notch-lt{position:absolute;top:0;left:50%;transform:translateX(-50%);width:110px;height:24px;background:#0A0A0A;border-radius:0 0 16px 16px;z-index:10}
+.deep .wa-screen-lt{width:100%;height:100%;display:flex;flex-direction:column;background:#ECE5DD;font-family:-apple-system,'Helvetica Neue',sans-serif;overflow:hidden;border-radius:36px}
+.deep .wa-header-lt{background:#128C7E;padding:28px 12px 9px;display:flex;align-items:center;gap:10px;flex-shrink:0;min-height:62px}
+.deep .wa-header-lt .wa-back{color:#fff;font-size:19px;margin-right:-4px;opacity:.9}
+.deep .wa-header-lt .wa-avatar{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#fff;flex-shrink:0;background:linear-gradient(135deg,var(--araujo),var(--araujo-dk))}
+.deep .wa-header-lt .wa-contact-name{font-size:13.5px;font-weight:600;color:#fff;display:flex;align-items:center;gap:4px}
+.deep .wa-header-lt .wa-contact-status{font-size:10.5px;color:rgba(255,255,255,.75)}
+.deep .wa-body-lt{flex:1;overflow-y:auto;padding:12px 8px;display:flex;flex-direction:column;justify-content:flex-end;gap:6px;min-height:0}
+.deep .wa-body-lt::-webkit-scrollbar{width:0}
+.deep .wa-body-lt .wa-date-chip{align-self:center;background:rgba(225,245,254,.92);color:#546E7A;font-size:10px;padding:3px 10px;border-radius:9px;margin:4px 0}
+.deep .wa-body-lt .msg{max-width:84%;padding:7px 10px 6px;border-radius:8px;font-size:11.5px;line-height:1.46;color:#111b21;word-break:break-word;box-shadow:0 1px .5px rgba(0,0,0,.12)}
+.deep .wa-body-lt .msg strong{font-weight:700;color:#0a1a12}
+.deep .wa-body-lt .msg-in{background:#fff;align-self:flex-start;border-top-left-radius:1px}
+.deep .wa-body-lt .msg-out{background:#DCF8C6;align-self:flex-end;border-top-right-radius:1px}
+.deep .wa-body-lt .msg-time{font-size:9px;color:#667781;text-align:right;margin-top:3px}
+.deep .wa-body-lt .msg-sys{align-self:center;background:rgba(255,244,214,.95);color:#7a6100;font-size:9.5px;padding:4px 11px;border-radius:9px;box-shadow:none;text-align:center;max-width:92%}
+.deep .wa-body-lt .wa-cta{background:#f6f6f6;color:#0a7ae0;font-weight:600;font-size:11px;text-align:center;padding:9px;border-top:1px solid #e6eaec;margin:5px -10px -6px;display:flex;align-items:center;justify-content:center;gap:6px}
+.deep .wa-body-lt .waprod{display:flex;gap:9px;align-items:center;background:#fff;border-radius:8px;padding:9px;box-shadow:0 1px .5px rgba(0,0,0,.12);align-self:flex-start;max-width:84%}
+.deep .wa-body-lt .waprod .wpi{width:46px;height:46px;border-radius:8px;background:linear-gradient(135deg,#f0faf4,#fff);border:1px solid #e6eaec;display:flex;align-items:center;justify-content:center;font-size:23px;flex:0 0 auto}
+.deep .wa-body-lt .waprod .wpt{font-size:11px;font-weight:700;color:#0a1a12;line-height:1.3}
+.deep .wa-body-lt .waprod .wpp{font-size:11.5px;color:#075E54;font-weight:800;margin-top:2px}
+.deep .wa-input-bar-lt{display:flex;align-items:center;gap:7px;padding:7px 9px;background:#F0F0F0;flex-shrink:0}
+.deep .wa-input-bar-lt .inp{flex:1;background:#fff;border-radius:20px;padding:8px 14px;font-size:11px;color:#888}
+.deep .wa-input-bar-lt .mic{width:34px;height:34px;border-radius:50%;background:#128C7E;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.deep .wa-input-bar-lt .mic svg{width:16px;height:16px;fill:#fff}
+.vf{width:13px;height:13px}
+
 /* keyword pills */
 .kw-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:40px}
 .kw{background:linear-gradient(135deg,rgba(0,150,250,.1),rgba(0,150,250,.04));border:1px solid rgba(0,150,250,.25);border-radius:12px;padding:14px 24px;font-family:var(--font);font-size:clamp(13px,1.2vw,15px);font-weight:700;color:#fff;letter-spacing:.3px;text-align:center;backdrop-filter:blur(6px);transition:transform .3s,border-color .3s,box-shadow .3s}
@@ -423,6 +521,19 @@ footer b{color:var(--mute)}
   .scroller{scroll-snap-type:none}
   .dots,.topnav{display:none}
 }
+
+/* ===== Carousel (WhatsApp product carousel) ===== */
+.wa-carousel{display:flex;gap:9px;overflow-x:auto;padding:4px 2px 8px;max-width:100%;scrollbar-width:none;align-self:flex-start;width:100%}
+.wa-carousel::-webkit-scrollbar{height:0}
+.wa-ccard{flex:0 0 auto;width:150px;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 1px .5px rgba(0,0,0,.13);display:flex;flex-direction:column}
+.wa-ccard .cc-img{height:74px;background:linear-gradient(135deg,#fff7e6,#ffe9c2);display:flex;align-items:center;justify-content:center;font-size:28px}
+.wa-ccard .cc-body{padding:9px 10px 10px}
+.wa-ccard .cc-name{font-size:11px;font-weight:700;color:#0a1a12;line-height:1.3;margin-bottom:2px}
+.wa-ccard .cc-price{font-size:11.5px;color:#075E54;font-weight:800;margin-bottom:8px}
+.wa-ccard .cc-btn{border:none;background:#075E54;color:#fff;font-family:var(--font);font-weight:700;font-size:10.5px;padding:7px;border-radius:7px;cursor:pointer;width:100%;text-align:center;transition:background .2s}
+.wa-ccard .cc-btn:hover{background:#0c7d70}
+.wa-ccard.picked{outline:2px solid #1fbf6e}
+.msg-sys{align-self:center;background:rgba(255,255,255,.06);border:1px solid var(--border);color:var(--dim);font-size:10.5px;padding:5px 12px;border-radius:20px;margin:10px 0}
 
 /* ===== Checkout Mockups Section ===== */
 .ck-section-title{font-size:clamp(26px,4.2vw,52px);max-width:800px;margin-bottom:14px}
@@ -909,6 +1020,31 @@ footer b{color:var(--mute)}
       </div>
     </div>
 
+    <!-- RECUPERAÇÃO DE CARRINHO -->
+    <div class="mock-col rv" style="max-width:360px;margin:48px auto 0">
+      <div class="mock-label tobe">To Be · Recuperação proativa</div>
+      <div class="mock-desc">O cliente some no meio da compra. No dia seguinte, ele volta e diz só "oi" — o agente já sabe do carrinho abandonado e retoma de onde parou, sem o cliente repetir nada.</div>
+      <div class="phone-frame" id="cartPhone" style="height:580px">
+        <div class="phone-screen">
+          <div class="phone-notch"><i></i><b></b><i></i></div>
+          <div class="wa-screen">
+            <div class="wa-header">
+              <div class="wa-avatar" style="background:linear-gradient(135deg,var(--blip),#1fbf6e)">A</div>
+              <div><div class="wa-contact-name">Drogaria Araujo</div><div class="wa-contact-status">online · Blip Studio</div></div>
+            </div>
+            <div class="wa-body" id="cartBody">
+              <div class="wa-date-chip">Ontem</div>
+            </div>
+            <div class="wa-input-bar">
+              <div class="inp">Mensagem</div>
+              <div class="mic"><svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 003-3V5a3 3 0 00-6 0v6a3 3 0 003 3z"/></svg></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="of-replay" id="cartReplay" style="margin-top:8px">▶ Reiniciar demonstração</div>
+    </div>
+
     <!-- BENEFITS -->
     <div class="ck-benefits rv">
       <div class="ck-ben"><div class="bi">🚀</div><h4>Jornada mais fluida</h4><p>O cliente não sai do WhatsApp em nenhum momento — da descoberta ao pagamento.</p></div>
@@ -923,8 +1059,8 @@ footer b{color:var(--mute)}
 <section id="jornada">
   <div class="wrap">
     <div class="eyebrow rv">Além do Studio</div>
-    <h1 class="rv" style="font-size:clamp(26px,4.2vw,52px);max-width:800px;margin-bottom:14px">A jornada completa em <span class="hl">dez momentos.</span></h1>
-    <p class="lead rv">Do primeiro sinal de necessidade até a próxima compra, o cliente permanece no mesmo canal. Cada capacidade entra quando é necessária e sai quando deixa de ser.</p>
+    <h1 class="rv" style="font-size:clamp(26px,4.2vw,52px);max-width:800px;margin-bottom:14px">7 momentos em uma única <span class="hl">plataforma de gestão.</span></h1>
+    <p class="lead rv">Cada ponto do ciclo abaixo é um produto do ecossistema Blip trabalhando junto — da escuta social à fidelização. Passe pelos nós para ver o que cada momento entrega na operação da Drogaria Araujo.</p>
 
     <div class="cyclegrid rv">
       <div class="ringwrap">
@@ -949,6 +1085,359 @@ footer b{color:var(--mute)}
       <div class="cyclepanel rv" id="cyclePanel"></div>
     </div>
     <div class="ringlist" id="ringList"></div>
+  </div>
+</section>
+
+<!-- ============ DEEP DIVE 01 · ESCUTAR ============ -->
+<section id="escutar">
+  <div class="wrap">
+    <div class="deep rv">
+      <div class="deep-txt rv">
+        <div class="stepnum"><span class="cir">01</span> Escutar <span class="prod">· Stilingue by Blip</span></div>
+        <h3>A Araujo entra na conversa antes mesmo do cliente chamar.</h3>
+        <p class="desc">O <b>Stilingue</b> é a plataforma de social listening da Blip: escuta menções sobre saúde, medicamentos e farmácia em redes sociais, Reclame Aqui e sites — e <b>responde tudo de um lugar só</b>, por praça e sentimento. A escuta vira ação: audiência qualificada, alerta de crise e oportunidade de venda.</p>
+        <div class="exstack">
+          <div class="ex-dk">
+            <div class="exh-dk">Como funciona na operação da Araujo</div>
+            <ol class="steps">
+              <li><b>Escuta contínua</b> em X/Twitter, Instagram, Reclame Aqui e marketplaces.</li>
+              <li><b>Classificação automática</b> por tema, sentimento e região.</li>
+              <li>Do mesmo painel, o time <b>responde o comentário e puxa a pessoa para o WhatsApp.</b></li>
+            </ol>
+          </div>
+          <div class="ex-dk gain">
+            <div class="exh-dk">Ganhos reais</div>
+            <p>Menção pública vira <b>lead qualificado</b>, crise é contida na origem e a marca aparece cuidando — no momento exato da necessidade.</p>
+            <div class="gchips-dk"><span>Antecipação de crise</span><span class="go">Novos leads</span><span>Uma central para tudo</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="deep-vis rv">
+        <div class="xcard-dk">
+          <div class="xtop"><span class="xdotwrap"><i></i><i></i><i></i></span><span class="xurl">x.com</span></div>
+          <div class="xpost">
+            <div class="xhead">
+              <div class="xav marcelo">M</div>
+              <div class="xnamewrap">
+                <div class="xname-row">Marcelo Andrade <span class="xmeta">·</span> <span class="xhandle">@marcelo_andrd</span></div>
+              </div>
+              <span class="xmore">···</span>
+            </div>
+            <div class="xbody-txt">alguém sabe onde tem Mounjaro disponível? já fui em 3 farmácias e não encontrei 😩</div>
+            <div class="xtime">14:07 · 9 mai 2026</div>
+            <div class="xstats">
+              <span><svg viewBox="0 0 24 24" fill="currentColor" style="opacity:.5"><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01Z"/></svg> 128</span>
+              <span><svg viewBox="0 0 24 24" fill="currentColor" style="opacity:.5"><path d="M4.5 3.88l4.35 4.35-1.3 1.3L5.4 7.38V16c0 1.1.9 2 2 2H13v2H7.4a4 4 0 0 1-4-4V7.38L1.25 9.53l-1.3-1.3L4.5 3.88Zm10.6 3.75H9.6v-2h5.5a4 4 0 0 1 4 4V16.6l2.15-2.15 1.3 1.3-4.35 4.35-4.35-4.35 1.3-1.3 2.15 2.15V9.63c0-1.1-.9-2-2-2Z"/></svg> 34</span>
+              <span><svg viewBox="0 0 24 24" fill="currentColor" style="opacity:.5"><path d="M12 2.59l5.7 5.7-1.41 1.42L13 6.41V16h-2V6.41l-3.3 3.3-1.41-1.42L12 2.59Z"/></svg> 890</span>
+            </div>
+          </div>
+          <div class="xreply-wrap">
+            <span class="xreply-line"></span>
+            <div class="xreply">
+              <div class="xav araujo">A</div>
+              <div class="xnamewrap">
+                <div class="xname-row">Drogaria Araujo <svg class="xcheck" viewBox="0 0 22 22"><path fill="#1D9BF0" d="M20.396 11c-.018-.646-.215-1.275-.57-1.82a3.9 3.9 0 0 0-1.556-1.379c.34-.63.484-1.351.415-2.056a3.87 3.87 0 0 0-1.106-2.07 3.9 3.9 0 0 0-2.07-1.106 3.9 3.9 0 0 0-2.056.415 3.9 3.9 0 0 0-1.379-1.556A3.94 3.94 0 0 0 11 1c-.646.018-1.275.215-1.82.57a3.9 3.9 0 0 0-1.379 1.556 3.9 3.9 0 0 0-2.056-.415 3.87 3.87 0 0 0-2.07 1.106 3.9 3.9 0 0 0-1.106 2.07c-.069.705.075 1.426.415 2.056A3.9 3.9 0 0 0 1.174 9.18 3.94 3.94 0 0 0 .604 11c.018.646.215 1.275.57 1.82a3.9 3.9 0 0 0 1.556 1.379c-.34.63-.484 1.351-.415 2.056a3.87 3.87 0 0 0 1.106 2.07 3.9 3.9 0 0 0 2.07 1.106c.705.069 1.426-.075 2.056-.415a3.9 3.9 0 0 0 1.379 1.556c.545.355 1.174.552 1.82.57.646-.018 1.275-.215 1.82-.57a3.9 3.9 0 0 0 1.379-1.556c.63.34 1.351.484 2.056.415a3.87 3.87 0 0 0 2.07-1.106 3.9 3.9 0 0 0 1.106-2.07c.069-.705-.075-1.426-.415-2.056a3.9 3.9 0 0 0 1.556-1.379c.355-.545.552-1.174.57-1.82Zm-11.11 3.52-3.4-3.377 1.294-1.302 2.106 2.09 4.6-4.615 1.294 1.302Z"/></svg> <span class="xmeta">·</span> <span class="xhandle">@drogariaaraujo</span></div>
+                <div class="xbody-txt">Oi, Marcelo! Aqui a gente sabe sim onde tem 💚 Temos Mounjaro disponível em lojas próximas de você. Entra no nosso WhatsApp que a gente confirma o estoque e já separa pra retirada — sem precisar rodar mais farmácia:</div>
+                <div class="xlinkcard">
+                  <span class="xlk-ic"><svg viewBox="0 0 24 24"><path d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.45 1.34 4.95L2 22l5.23-1.37a9.9 9.9 0 0 0 4.81 1.24c5.5 0 9.96-4.46 9.96-9.96S17.54 2 12.04 2z"/></svg></span>
+                  <div><div class="xlk-t">Fale com a Drogaria Araujo no WhatsApp</div><div class="xlk-d">wa.me/araujo · resposta em poucos minutos</div></div>
+                </div>
+                <div class="xtime">14:09 · resposta</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="xcap-dk">Simulação de post e resposta no X — o Stilingue detecta, o time responde e conduz para o WhatsApp.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEEP DIVE 02 · ATRAIR ============ -->
+<section id="atrair">
+  <div class="wrap">
+    <div class="deep rv">
+      <div class="deep-txt rv">
+        <div class="stepnum"><span class="cir">02</span> Atrair <span class="prod">· Blip Marketing</span></div>
+        <h3>Do anúncio à conversa — e da conversa à venda.</h3>
+        <p class="desc">Com o <b>Blip Marketing</b>, a Araujo centraliza os anúncios de Meta, Instagram, Google e TikTok em <b>uma única plataforma</b>, com envio de sinais de conversão para otimizar a mídia por venda (não por clique). E o cliente que toca no anúncio cai numa conversa no WhatsApp com <b>janela de 72h isenta de cobrança</b>.</p>
+        <div class="exstack">
+          <div class="ex-dk">
+            <div class="exh-dk">Como funciona na operação da Araujo</div>
+            <ol class="steps">
+              <li>Campanha de <b>conscientização sobre proteção solar</b> roda no Instagram e no Google.</li>
+              <li>O clique abre o WhatsApp com <b>72h sem custo de mensageria</b>.</li>
+              <li>O agente educa, tira dúvidas com responsabilidade e conduz para avaliação e compra.</li>
+            </ol>
+          </div>
+          <div class="ex-dk gain">
+            <div class="exh-dk">Ganhos reais</div>
+            <p>Aquisição pelo canal de menor custo marginal, mídia medida por resultado e <b>venda fechada dentro da janela gratuita</b>.</p>
+            <div class="gchips-dk"><span class="go">72h sem custo</span><span>Anúncios centralizados</span><span>Sinais de conversão</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="deep-vis rv">
+        <div style="max-width:320px;margin:0 auto">
+          <div style="background:rgba(255,255,255,.04);border-radius:18px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.5);border:1px solid var(--border)">
+            <div style="padding:8px 12px;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border)">
+              <span style="width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,var(--araujo),var(--araujo-dk));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:9px;flex:0 0 auto">A</span>
+              <span style="font-size:11px;font-weight:700;color:#fff;line-height:1.1">drogariaaraujo<br><em style="font-weight:400;font-size:9px;color:var(--dim);font-style:normal">Patrocinado</em></span>
+            </div>
+            <div style="background:linear-gradient(150deg,var(--araujo-dk),var(--araujo));padding:30px 20px;text-align:center;color:#fff">
+              <div style="font-size:9px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#ffccd2;margin-bottom:8px">Saúde com informação</div>
+              <div style="font-size:18px;font-weight:800;letter-spacing:-.02em;line-height:1.2;margin-bottom:8px">Proteção solar: cuide da sua pele no verão</div>
+              <div style="font-size:10px;color:rgba(255,255,255,.85);line-height:1.4">Fale com nossos especialistas no WhatsApp 💬</div>
+            </div>
+            <div style="background:var(--araujo);color:#fff;font-size:12px;font-weight:700;padding:11px;text-align:center;display:flex;align-items:center;justify-content:center;gap:6px">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="#fff"><path d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.45 1.34 4.95L2 22l5.23-1.37a9.9 9.9 0 0 0 4.81 1.24c5.5 0 9.96-4.46 9.96-9.96S17.54 2 12.04 2z"/></svg>
+              Enviar mensagem
+            </div>
+          </div>
+          <div style="text-align:center;margin:12px 0"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--blip)" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg></div>
+          <div style="background:rgba(0,150,250,.08);border:1px solid rgba(0,150,250,.3);border-radius:12px;padding:11px 14px;text-align:center;font-size:11px;color:#7fb4ff;font-weight:700;letter-spacing:.03em">✓ CONVERSA ABERTA · JANELA DE 72H SEM CUSTO</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEEP DIVE 03 · ENTENDER ============ -->
+<section id="entender">
+  <div class="wrap">
+    <div class="rv">
+      <div class="stepnum"><span class="cir">03</span> Entender <span class="prod">· Blip Studio</span></div>
+      <h1 class="rv" style="font-size:clamp(20px,2.3vw,28px);max-width:700px;margin-top:6px">Um cérebro que <span class="hl">orquestra especialistas.</span></h1>
+      <p class="lead rv">O <b>Blip Studio</b> é onde a Araujo cria e orquestra agentes de IA especialistas — em vender, tirar dúvidas, ler receita, cuidar da recorrência. Gestão simples, manutenção fácil (no-code / low-code / high-code) e a capacidade de <b>integrar agentes de terceiros</b> como um hub central.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:30px" class="rv">
+      <div class="ex-dk gain">
+        <div class="exh-dk">Vantagens do Studio</div>
+        <div style="display:flex;flex-direction:column;gap:10px;margin-top:2px">
+          <div style="display:flex;gap:13px;align-items:flex-start;padding:13px 16px;border:1px solid rgba(0,150,250,.24);background:rgba(0,150,250,.05);border-radius:13px"><span style="font-size:14px">🛠️</span><span style="font-size:13.5px;color:var(--mute);line-height:1.5"><b style="color:var(--text)">Gestão simples e manutenção fácil</b> — construir e evoluir jornadas sem depender de deploy.</span></div>
+          <div style="display:flex;gap:13px;align-items:flex-start;padding:13px 16px;border:1px solid rgba(0,150,250,.24);background:rgba(0,150,250,.05);border-radius:13px"><span style="font-size:14px">🔌</span><span style="font-size:13.5px;color:var(--mute);line-height:1.5"><b style="color:var(--text)">Integração via MCP</b> com CRM, estoque por loja, catálogo e ERP em tempo real.</span></div>
+          <div style="display:flex;gap:13px;align-items:flex-start;padding:13px 16px;border:1px solid rgba(0,150,250,.24);background:rgba(0,150,250,.05);border-radius:13px"><span style="font-size:14px">🕸️</span><span style="font-size:13.5px;color:var(--mute);line-height:1.5"><b style="color:var(--text)">Interoperabilidade A2A</b> — orquestra agentes próprios da Araujo e de terceiros no mesmo fluxo.</span></div>
+        </div>
+      </div>
+      <div class="ex-dk">
+        <div class="exh-dk">O que o Studio entrega</div>
+        <div class="spills" style="margin-top:2px">
+          <span class="spill">🎛️ Orquestração</span>
+          <span class="spill">🧠 Contexto &amp; memória</span>
+          <span class="spill">📚 Base de conhecimento</span>
+          <span class="spill">🔌 Integrações <em>MCP</em></span>
+          <span class="spill">🧪 Testes A/B</span>
+          <span class="spill">📊 Logs &amp; relatórios</span>
+          <span class="spill">⚡ Baixa latência</span>
+          <span class="spill">📱 Multicanal nativo</span>
+        </div>
+      </div>
+    </div>
+    <!-- Arquitetura A/B -->
+    <div class="arch rv" style="margin-top:40px">
+      <div class="arch-label">Arquitetura de vendas</div>
+      <div class="arch-title">Orquestrador com teste A/B entre agentes de vendas</div>
+      <div class="arch-flow">
+        <div class="arch-node"><div class="ico" style="background:rgba(255,255,255,.06);border:1px solid var(--border)">👤</div><div class="lbl">Cliente<br><strong>no WhatsApp</strong></div></div>
+        <div class="arch-arr"><div class="al" style="background:linear-gradient(90deg,var(--dim),var(--blip))"></div><div class="at">mensagem</div></div>
+        <div class="arch-node"><div class="ico" style="background:rgba(0,150,250,.12);border:1.5px solid rgba(0,150,250,.4)">🧠</div><div class="lbl"><strong style="color:var(--blip)">Orquestrador</strong><br>identifica intenção</div></div>
+        <div class="arch-arr"><div class="al" style="background:linear-gradient(90deg,var(--blip),var(--green))"></div><div class="at">roteia</div></div>
+        <div class="arch-agents">
+          <div class="arch-agent blue">🛒 Agente de Vendas Blip <span class="ab-badge">A/B · A</span></div>
+          <div class="arch-agent red">🛒 Agente de Vendas Araujo <span class="ab-badge">A/B · B</span></div>
+          <div class="arch-agent green">🔄 Agente Recorrência</div>
+          <div class="arch-agent amber">💊 Agente Receitas</div>
+          <div class="arch-agent" style="background:rgba(155,109,255,.06);border:1px solid rgba(155,109,255,.22)">🎧 Agente SAC</div>
+        </div>
+        <div class="arch-arr"><div class="al" style="background:linear-gradient(90deg,var(--green),var(--blip))"></div><div class="at">ou escalona</div></div>
+        <div class="arch-node"><div class="ico" style="background:rgba(0,150,250,.07);border:1px solid rgba(0,150,250,.28)">🎧</div><div class="lbl">Humano<br><strong style="color:var(--blip)">+ Copilot</strong></div></div>
+      </div>
+      <div class="arch-pills">
+        <div class="arch-pill"><b>Teste A/B de vendas</b> — o orquestrador distribui tráfego entre o agente Blip e o agente próprio da Araujo, comparando conversão, ticket e NPS.</div>
+        <div class="arch-pill"><b>Estoque em tempo real</b> — o agente confirma disponibilidade por loja antes de responder ao cliente, sem alucinação.</div>
+        <div class="arch-pill"><b>Pagamento nativo</b> — Pix, cartão e Open Finance sem sair do WhatsApp via Blip Payments.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEEP DIVE 04 · APOIAR ============ -->
+<section id="apoiar">
+  <div class="wrap">
+    <div class="deep rev rv">
+      <div class="deep-txt rv">
+        <div class="stepnum"><span class="cir">04</span> Apoiar <span class="prod">· BLiP Desk + Copilot</span></div>
+        <h3>O que sobra para o humano chega pronto.</h3>
+        <p class="desc">Quando a conversa precisa de gente, o <b>BLiP Desk com Copilot</b> entrega ao atendente um <b>resumo inteligente</b> da conversa, o sentimento do cliente e uma resposta sugerida no tom da Araujo — sem reler a thread inteira nem alternar entre abas.</p>
+        <div class="exstack">
+          <div class="ex-dk">
+            <div class="exh-dk">O que o Copilot faz</div>
+            <ol class="steps">
+              <li><b>Resumo automático</b>: quem é o cliente, o que quer, o que já foi tentado.</li>
+              <li><b>Resposta sugerida</b> a partir da base de conhecimento da Araujo.</li>
+              <li><b>Melhoria de texto</b> e transcrição de áudio em um clique.</li>
+            </ol>
+          </div>
+          <div class="ex-dk gain">
+            <div class="exh-dk">Ganhos reais</div>
+            <p>Menor tempo médio de atendimento, respostas padronizadas e a <b>mesma equipe cuidando de mais gente</b>, com mais qualidade.</p>
+            <div class="gchips-dk"><span>− TMA</span><span class="go">+ capacidade</span><span>Padronização</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="deep-vis rv">
+        <div class="copilot-dk">
+          <div class="ch">✦ Copilot · Resumo Inteligente</div>
+          <div class="cb">
+            <div class="lb">Cliente</div>
+            <div>Marina Alves · cliente fidelidade · pedido <strong>478213004</strong>, medicamento contínuo atrasado 2 dias.</div>
+            <div class="lb">Sentimento</div>
+            <div class="chips"><span class="chip r">Insatisfação</span><span class="chip y">Risco de churn</span></div>
+            <div class="lb">Resposta sugerida</div>
+            <div class="sugg">"Marina, confirmei o reagendamento da sua entrega para amanhã até as 18h e apliquei um crédito de cortesia. Seu tratamento não vai ficar sem cobertura. 💚"</div>
+          </div>
+          <div class="cf"><span>Sugerir resposta</span><span>Melhorar texto</span><span>Transcrever áudio</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEEP DIVE 05 · CONVERTER ============ -->
+<section id="converter">
+  <div class="wrap">
+    <div class="deep rv">
+      <div class="deep-txt rv">
+        <div class="stepnum"><span class="cir">05</span> Converter <span class="prod">· Blip Payments</span></div>
+        <h3>Checkout 100% dentro do WhatsApp, com cross-sell e upsell inteligente.</h3>
+        <p class="desc">Com o <b>Blip Payments</b>, o cliente sem cadastro cria a conta na hora por <b>WhatsApp Flows</b>, a IA sugere <b>cross-sell e upsell</b> relevantes para elevar o ticket, e o pagamento acontece por <b>PIX copia e cola</b> (ou cartão) sem sair da conversa. Cada redirecionamento a menos é um abandono a menos.</p>
+        <div class="exstack">
+          <div class="ex-dk">
+            <div class="exh-dk">Como funciona na operação da Araujo</div>
+            <ol class="steps">
+              <li>Cliente sem conta? A IA abre um <b>WhatsApp Flow</b> e cria o cadastro (Nome, CPF, CEP) na hora.</li>
+              <li>Com o item no carrinho, a IA oferece <b>cross-sell/upsell</b> com gatilho de frete grátis — aumentando o ticket médio.</li>
+              <li>Pagamento por <b>PIX copia e cola</b>, cartão ou na entrega, com confirmação na mesma conversa.</li>
+            </ol>
+          </div>
+          <div class="ex-dk gain">
+            <div class="exh-dk">Ganhos reais</div>
+            <p><b>Mais ticket, menos fricção.</b> O cross-sell inteligente eleva o valor do pedido e o checkout no chat fecha o funil onde a intenção nasceu.</p>
+            <div class="gchips-dk"><span class="go">+ ticket médio</span><span>Cross-sell / upsell</span><span>PIX no chat</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="deep-vis rv">
+        <div class="phone-frame-lt">
+          <div class="phone-notch-lt"></div>
+          <div class="wa-screen-lt">
+            <div class="wa-header-lt"><span class="wa-back">‹</span><div class="wa-avatar">A</div><div><div class="wa-contact-name">Drogaria Araujo <svg class="vf" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#25D366"/><path d="M7 12.5l3.2 3L17 8.5" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="wa-contact-status">online</div></div></div>
+            <div class="wa-body-lt">
+              <div class="wa-date-chip">Hoje</div>
+              <div class="msg msg-out">Quero comprar um protetor solar<div class="msg-time">10:01</div></div>
+              <div class="msg msg-in">Ótima escolha! ☀️ Encontrei opções de protetor solar para você.<br><br>☀️ <strong>La Roche-Posay Anthelios FPS 70</strong> — R$ 89,90<br>🧴 <strong>Sundown Clear FPS 60</strong> — R$ 54,90<div class="msg-time">10:01</div></div>
+              <div class="msg msg-out">O La Roche-Posay<div class="msg-time">10:02</div></div>
+              <div class="msg msg-in">Excelente! 🛒 E que tal adicionar também:<br><br>💊 <strong>Vitamina D 2000 UI</strong> — R$ 34,90<br><em style="font-size:10px;color:#667781">Complemento perfeito para quem se protege do sol!</em><div class="msg-time">10:02</div></div>
+              <div class="msg msg-out">Pode adicionar!<div class="msg-time">10:02</div></div>
+              <div class="msg msg-in">🛍️ Total: <strong>R$ 133,70</strong> — pagar via Pix ou Open Finance, sem sair da conversa.<div class="msg-time">10:03</div></div>
+            </div>
+            <div class="wa-input-bar-lt"><div class="inp">Mensagem</div><div class="mic"><svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3zm7 11a7 7 0 0 1-14 0H3a9 9 0 0 0 8 8.94V23h2v-2.06A9 9 0 0 0 21 12z"/></svg></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEEP DIVE 06 · ACOMPANHAR ============ -->
+<section id="acompanhar">
+  <div class="wrap">
+    <div class="deep rv">
+      <div class="deep-txt rv">
+        <div class="stepnum"><span class="cir">06</span> Acompanhar <span class="prod">· Notificações ativas</span></div>
+        <h3>O cliente sabe do pedido antes de precisar perguntar.</h3>
+        <p class="desc">Com <b>notificações proativas de rastreamento</b> no WhatsApp, a Araujo avisa cada etapa — pedido confirmado, separado, a caminho e entregue — <b>sem o cliente abrir chamado</b>. Menos "cadê meu pedido?" na central, mais tranquilidade.</p>
+        <div class="exstack">
+          <div class="ex-dk">
+            <div class="exh-dk">Como funciona na operação da Araujo</div>
+            <ol class="steps">
+              <li>A cada mudança de status, a IA <b>dispara um aviso ativo</b> no WhatsApp.</li>
+              <li>O cliente acompanha tudo pela conversa, com link de rastreio.</li>
+              <li>Dúvidas de status são resolvidas <b>antes de virarem contato</b> na central.</li>
+            </ol>
+          </div>
+          <div class="ex-dk gain">
+            <div class="exh-dk">Ganhos reais</div>
+            <p><b>Menos contatos reativos.</b> A informação chega na hora certa e desafoga o atendimento — cada "cadê meu pedido" evitado é custo que não acontece.</p>
+            <div class="gchips-dk"><span>− contatos na central</span><span class="go">+ satisfação</span><span>Status proativo</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="deep-vis rv">
+        <div class="phone-frame-lt">
+          <div class="phone-notch-lt"></div>
+          <div class="wa-screen-lt">
+            <div class="wa-header-lt"><span class="wa-back">‹</span><div class="wa-avatar">A</div><div><div class="wa-contact-name">Drogaria Araujo <svg class="vf" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#25D366"/><path d="M7 12.5l3.2 3L17 8.5" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="wa-contact-status">online</div></div></div>
+            <div class="wa-body-lt">
+              <div class="wa-date-chip">Hoje</div>
+              <div class="msg-sys">🔔 Notificações automáticas do seu pedido</div>
+              <div class="msg msg-in">📦 Pedido <strong>#9876</strong> confirmado! Já estamos separando na loja Savassi.<div class="msg-time">09:12</div></div>
+              <div class="msg msg-in">🧾 Pedido conferido pela farmácia e embalado.<div class="msg-time">09:40</div></div>
+              <div class="msg msg-in">🛵 <strong>Saiu para entrega!</strong> Chega até <strong>11:30</strong>.<div class="wa-cta">📍 Acompanhar no mapa</div><div class="msg-time">10:05</div></div>
+              <div class="msg msg-in">✅ <strong>Entregue!</strong> Boa recuperação. 💚 Qualquer coisa, é só chamar.<div class="msg-time">11:18</div></div>
+              <div class="msg-sys">Nenhum contato com a central foi necessário ✅</div>
+            </div>
+            <div class="wa-input-bar-lt"><div class="inp">Mensagem</div><div class="mic"><svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3zm7 11a7 7 0 0 1-14 0H3a9 9 0 0 0 8 8.94V23h2v-2.06A9 9 0 0 0 21 12z"/></svg></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEEP DIVE 07 · RELACIONAR ============ -->
+<section id="relacionar">
+  <div class="wrap">
+    <div class="deep rev rv">
+      <div class="deep-txt rv">
+        <div class="stepnum"><span class="cir">07</span> Relacionar <span class="prod">· Cuidado ativo, recompra &amp; fidelidade</span></div>
+        <h3>A conversa continua — e mostra que a Araujo se importa.</h3>
+        <p class="desc">Mensagens ativas de relacionamento acompanham <b>como vai o uso do medicamento</b>, demonstram cuidado e abrem um canal direto. É aí que a Araujo <b>acolhe, sugere complementos, reabastece e fideliza</b> — reiniciando o ciclo.</p>
+        <div class="exstack">
+          <div class="ex-dk">
+            <div class="exh-dk">Como funciona na operação da Araujo</div>
+            <ol class="steps">
+              <li>Dias após a compra, a IA pergunta <b>como está o tratamento</b>.</li>
+              <li>Se há um efeito colateral, ela <b>acolhe, sugere um complemento</b> e oferece falar com o farmacêutico.</li>
+              <li>No fim do ciclo, propõe a <b>recompra</b> e pontos do programa de fidelidade.</li>
+            </ol>
+          </div>
+          <div class="ex-dk gain">
+            <div class="exh-dk">Ganhos reais</div>
+            <p><b>Relacionamento que retém e vende.</b> Cuidado ativo aumenta a adesão ao tratamento, o cross-sell e o LTV — com a marca presente no momento certo.</p>
+            <div class="gchips-dk"><span class="go">+ LTV</span><span>Adesão ao tratamento</span><span>Cross-sell</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="deep-vis rv">
+        <div class="phone-frame-lt">
+          <div class="phone-notch-lt"></div>
+          <div class="wa-screen-lt">
+            <div class="wa-header-lt"><span class="wa-back">‹</span><div class="wa-avatar">A</div><div><div class="wa-contact-name">Drogaria Araujo <svg class="vf" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#25D366"/><path d="M7 12.5l3.2 3L17 8.5" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="wa-contact-status">online</div></div></div>
+            <div class="wa-body-lt">
+              <div class="wa-date-chip">Hoje</div>
+              <div class="msg-sys">💬 Mensagem ativa de relacionamento · 14 dias após a compra</div>
+              <div class="msg msg-in">Oi, Ana! 💚 Passando para saber como está indo seu tratamento com o <strong>Mounjaro</strong>. Está se adaptando bem?<div class="msg-time">10:00</div></div>
+              <div class="msg msg-out">Oi! No geral estou bem, mas tenho sentido um pouco de náusea 🤢<div class="msg-time">10:03</div></div>
+              <div class="msg msg-in">Obrigada por contar! 🙏 Náusea é comum nas primeiras semanas. Muita gente sente alívio com <strong>Vitamina B6 + Gengibre</strong>. Posso te mostrar uma opção?<div class="msg-time">10:03</div></div>
+              <div class="waprod"><div class="wpi">💊</div><div><div class="wpt">Vitamina B6 + Gengibre</div><div class="wpp">R$ 29,90</div></div></div>
+              <div class="msg msg-in">E se preferir, te conecto agora com um <strong>farmacêutico da Araujo</strong> para te orientar. Quer? 👩‍⚕️<div class="msg-time">10:04</div></div>
+            </div>
+            <div class="wa-input-bar-lt"><div class="inp">Mensagem</div><div class="mic"><svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3zm7 11a7 7 0 0 1-14 0H3a9 9 0 0 0 8 8.94V23h2v-2.06A9 9 0 0 0 21 12z"/></svg></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1128,46 +1617,34 @@ function obs(el){
 }
 
 var cycle=[
- {t:'Escutar',role:'Antes da compra',mini:'intenção e reputação',
+ {t:'Escutar',role:'Antes do contato · Stilingue by Blip',mini:'social listening',
   i:'<path d="M3.5 5h17a1.5 1.5 0 0 1 1.5 1.5v8a1.5 1.5 0 0 1-1.5 1.5h-9l-5 3.6V16h-3A1.5 1.5 0 0 1 2 14.5v-8A1.5 1.5 0 0 1 3.5 5Z"/><path d="M7.5 9.3v2.4M12 7.6v5.8M16.5 9.8v1.4"/>',
-  what:'A rede identifica menções sobre saúde, medicamentos e farmácia enquanto o tema ainda é público, por praça e sentimento.',
-  case:'O aumento de menções sobre gripe na Grande BH vira audiência qualificada, e o cluster de reclamação sobre falta de estoque vira alerta para a loja.'},
- {t:'Atrair',role:'Aquisição',mini:'do anúncio à conversa',
+  what:'A Araujo escuta menções sobre saúde e farmácia enquanto o tema ainda é público, por praça e sentimento, e responde tudo de um painel só, com o Stilingue by Blip.',
+  case:'Alguém no X pergunta onde tem determinado medicamento em falta — a Araujo responde publicamente e chama a pessoa para o WhatsApp.'},
+ {t:'Atrair',role:'Aquisição · Blip Marketing',mini:'do anúncio à conversa',
   i:'<path d="M4 10v4h3l7 4V6l-7 4H4Z"/><path d="M17.5 9.2a4 4 0 0 1 0 5.6"/><path d="M7 14.2V18a1.6 1.6 0 0 0 3.2 0v-2"/>',
-  what:'Click-to-WhatsApp e recuperação de carrinho convertem intenção em conversa. A mídia passa a ser medida por venda, não por clique.',
-  case:'O anúncio de vitaminas abre o fluxo de consulta sem formulário e sem landing page.'},
- {t:'Consultar',role:'Primeiro contato',mini:'intenção identificada',
+  what:'Com o Blip Marketing, a Araujo centraliza os anúncios de Meta, Instagram, Google e TikTok em uma única plataforma, medindo a mídia por venda — não por clique. Quem toca no anúncio cai numa conversa no WhatsApp com janela de 72h isenta de cobrança.',
+  case:'Uma campanha de orientação sobre determinado tratamento roda no Instagram; o clique abre o WhatsApp e o agente educa, tira dúvidas e conduz para a compra, tudo dentro da janela gratuita.'},
+ {t:'Entender',role:'Orquestração · Blip Studio',mini:'um cérebro que orquestra especialistas',
   i:'<circle cx="4.8" cy="12" r="2.3"/><circle cx="18.2" cy="6" r="2.3"/><circle cx="18.2" cy="18" r="2.3"/><path d="M6.9 10.9 16.1 7M6.9 13.1l9.2 3.9"/>',
-  what:'O orquestrador entende a intenção na primeira mensagem e roteia para o agente certo — vendas, receita, recorrência ou SAC.',
-  case:'O cliente manda "preciso dos remédios do meu pai" e o agente de receitas já assume a conversa.'},
- {t:'Orçar',role:'Receita e lista',mini:'IA lê a prescrição',
-  i:'<rect x="3.4" y="3.4" width="17.2" height="17.2" rx="3"/><path d="M7.6 9h8.8M7.6 13h6M7.6 17h3"/>',
-  what:'Foto de receita, lista ou dúvida — o agente resolve com estoque em tempo real por loja, sem fila de orçamentista.',
-  case:'A foto da receita volta como orçamento fechado em minutos, com disponibilidade confirmada na loja mais próxima.'},
- {t:'Fechar',role:'Checkout nativo',mini:'pago na conversa',
-  i:'<rect x="2.3" y="5" width="19.4" height="14" rx="2.6"/><path d="M2.3 9.6h19.4"/><rect x="5.6" y="12.6" width="4.4" height="3.2" rx="1"/>',
-  what:'Pix, cartão e open finance — tudo dentro do WhatsApp via Blip Payments, sem sair da conversa.',
-  case:'O pedido de medicamentos é pago no Pix gerado dentro do chat. Retirada ou entrega escolhida na mesma tela.'},
- {t:'Acompanhar',role:'Pós-pedido',mini:'status proativo',
-  i:'<path d="M4.2 13.4v-1.6a7.8 7.8 0 0 1 15.6 0v1.6"/><rect x="2" y="12.6" width="4.4" height="6.2" rx="2.2"/><rect x="17.6" y="12.6" width="4.4" height="6.2" rx="2.2"/><path d="M19.8 18.8v.7a2.6 2.6 0 0 1-2.6 2.6h-3.4"/>',
-  what:'Status do pedido em tempo real e notificações proativas de separação, pronto para retirada ou saída para entrega.',
-  case:'O cliente recebe "seu pedido está pronto para retirada na loja Savassi" antes de precisar perguntar.'},
- {t:'Medir',role:'NPS & Satisfação',mini:'feedback no momento certo',
-  i:'<rect x="2.4" y="4" width="19.2" height="16" rx="2.6"/><path d="M6.4 9.2h7M6.4 13.2h5"/><path d="M17.3 10.4l.85 2.2 2.2.85-2.2.85-.85 2.2-.85-2.2-2.2-.85 2.2-.85.85-2.2Z"/>',
-  what:'Pesquisa de satisfação no momento certo, logo após a compra, com classificação automática de sentimento.',
-  case:'O NPS chega 30 minutos depois da retirada. Nota baixa dispara alerta para o gerente da loja.'},
- {t:'Apoiar',role:'Humano + Copilot',mini:'IA para o time',
+  what:'O Blip Studio é onde a Araujo cria e orquestra agentes de IA especialistas — em vender, tirar dúvidas, ler receita, cuidar da recorrência — com integração via MCP ao estoque por loja, CRM e catálogo, e interoperabilidade A2A com agentes de terceiros.',
+  case:'O orquestrador testa em A/B o agente de vendas da Blip contra o agente próprio da Araujo, comparando conversão, ticket e NPS em tempo real.'},
+ {t:'Apoiar',role:'Humano + Copilot · BLiP Desk',mini:'o que sobra para o humano chega pronto',
   i:'<path d="M6.4 3.4h3l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A17.6 17.6 0 0 1 4.4 5.6 2 2 0 0 1 6.4 3.4Z"/><path d="M15.6 3.4a5.4 5.4 0 0 1 5 5"/>',
-  what:'Quando necessário, o atendente recebe resumo, sentimento e resposta sugerida via Copilot — contexto completo sem reler.',
-  case:'Seis linhas de resumo substituem a leitura do histórico inteiro antes da primeira resposta do farmacêutico.'},
- {t:'Repor',role:'Recorrência',mini:'lembrete de recompra',
-  i:'<rect x="2.6" y="2.6" width="12" height="12" rx="3.4"/><rect x="9.4" y="9.4" width="12" height="12" rx="3.4"/><path d="M12.4 14.6h2.2v2.2"/>',
-  what:'Lembretes de recompra baseados no ciclo de uso do medicamento. O agente calcula quando o remédio vai acabar.',
-  case:'30 dias depois, a mensagem "seu Losartana deve estar acabando — quer repetir o pedido?" chega sem o cliente pedir.'},
- {t:'Fidelizar',role:'O ciclo recomeça',mini:'LTV e cross-sell',
+  what:'Quando a conversa precisa de gente, o BLiP Desk com Copilot entrega ao atendente um resumo inteligente, o sentimento do cliente e uma resposta sugerida no tom da Araujo — sem reler a thread inteira.',
+  case:'Seis linhas de resumo substituem a leitura do histórico inteiro antes da primeira resposta do atendente, com reagendamento e crédito de cortesia já sugeridos.'},
+ {t:'Converter',role:'Checkout nativo · Blip Payments',mini:'pago na conversa, com upsell',
+  i:'<rect x="2.3" y="5" width="19.4" height="14" rx="2.6"/><path d="M2.3 9.6h19.4"/><rect x="5.6" y="12.6" width="4.4" height="3.2" rx="1"/>',
+  what:'Com o Blip Payments, o cliente sem cadastro cria conta na hora via WhatsApp Flows, a IA sugere cross-sell e upsell relevantes, e o pagamento acontece por Pix copia e cola ou Open Finance sem sair da conversa.',
+  case:'O pedido de protetor solar ganha oferta de vitamina D no momento certo, e o pagamento é confirmado por Open Finance sem copiar nenhum código.'},
+ {t:'Acompanhar',role:'Pós-pedido · Notificações ativas',mini:'status proativo',
+  i:'<path d="M4.2 13.4v-1.6a7.8 7.8 0 0 1 15.6 0v1.6"/><rect x="2" y="12.6" width="4.4" height="6.2" rx="2.2"/><rect x="17.6" y="12.6" width="4.4" height="6.2" rx="2.2"/><path d="M19.8 18.8v.7a2.6 2.6 0 0 1-2.6 2.6h-3.4"/>',
+  what:'Notificações proativas de rastreamento no WhatsApp avisam cada etapa — confirmado, separado, a caminho e entregue — sem o cliente abrir chamado. Menos "cadê meu pedido?" na central.',
+  case:'O cliente recebe "seu pedido está pronto para retirada na loja Savassi" antes de precisar perguntar, e nenhum contato com a central é necessário.'},
+ {t:'Relacionar',role:'Cuidado ativo & recompra',mini:'a conversa continua',
   i:'<path d="M20.5 12a8.5 8.5 0 1 1-2.6-6.1"/><path d="M20.6 4.4v4.4h-4.4"/>',
-  what:'Ofertas personalizadas e cross-sell baseados no histórico. A próxima conversa parte do que já se sabe sobre o cliente.',
-  case:'Quem comprou protetor solar recebe oferta de pós-sol e hidratante na semana seguinte, com desconto exclusivo.'}
+  what:'Mensagens ativas de relacionamento acompanham como vai o uso do medicamento, demonstram cuidado e abrem canal direto. É aí que a Araujo acolhe, sugere complementos, reabastece e fideliza — reiniciando o ciclo.',
+  case:'14 dias após a compra, a mensagem "como está indo seu tratamento?" chega sem o cliente pedir. Se há efeito colateral, a IA acolhe e sugere um complemento, com opção de falar com o farmacêutico.'}
 ];
 
 var rn=document.getElementById('ringNodes'),cpn=document.getElementById('cyclePanel'),rl=document.getElementById('ringList');
@@ -1403,6 +1880,32 @@ function addBtns(btns){
   body.scrollTop=body.scrollHeight;
 }
 
+function addCarousel(items,onPick){
+  var wrap=document.createElement('div');wrap.style.opacity='0';wrap.style.transform='translateY(6px)';wrap.style.alignSelf='flex-start';wrap.style.width='100%';
+  var cw=document.createElement('div');cw.className='wa-carousel';
+  items.forEach(function(p,idx){
+    var c=document.createElement('div');c.className='wa-ccard';
+    c.innerHTML='<div class="cc-img">'+p.emoji+'</div><div class="cc-body"><div class="cc-name">'+p.name+'</div><div class="cc-price">'+p.price+'</div><button type="button" class="cc-btn">Escolher</button></div>';
+    c.querySelector('.cc-btn').addEventListener('click',function(){
+      cw.querySelectorAll('.wa-ccard').forEach(function(cc){cc.classList.remove('picked');});
+      c.classList.add('picked');
+      wrap.style.pointerEvents='none';wrap.style.opacity='.55';
+      onPick(p);
+    });
+    cw.appendChild(c);
+  });
+  wrap.appendChild(cw);body.appendChild(wrap);
+  requestAnimationFrame(function(){wrap.style.transition='all .3s';wrap.style.opacity='1';wrap.style.transform='none';});
+  body.scrollTop=body.scrollHeight;
+}
+function fmt(n){return 'R$ '+n.toFixed(2).replace('.',',');}
+var SUN_PRODUCTS=[
+  {name:'La Roche-Posay Anthelios FPS 70',price:89.90,emoji:'☀️'},
+  {name:'Sundown Clear FPS 60',price:54.90,emoji:'🧴'}
+];
+var chosen={name:'',price:0};
+function orderTotal(){return chosen.price+34.90+8.90;}
+
 /* Flow overlay */
 var flowOverlay=document.getElementById('tobeFlowOverlay');
 var flowModal=document.getElementById('tobeFlowModal');
@@ -1416,7 +1919,7 @@ document.getElementById('tobeFlowSubmit').onclick=function(){
   closeFlow();
   addMsg('📋 Dados enviados via formulário','user');
   delay(1200).then(function(){
-    addMsg('Perfeito! Seus dados foram recebidos ✅<br><br>Resumo do pedido:<br>☀️ Anthelios FPS 70 — R$ 89,90<br>💊 Vitamina D — R$ 34,90<br>🚚 Frete — R$ 8,90<br><br><strong>Total: R$ 133,70</strong><br><br>Como você quer pagar?');
+    addMsg('Perfeito! Seus dados foram recebidos ✅<br><br>Resumo do pedido:<br>'+chosen.emoji+' '+chosen.name+' — '+fmt(chosen.price)+'<br>💊 Vitamina D — R$ 34,90<br>🚚 Frete — R$ 8,90<br><br><strong>Total: '+fmt(orderTotal())+'</strong><br><br>Como você quer pagar?');
     return delay(600);
   }).then(function(){
     addBtns([
@@ -1457,9 +1960,9 @@ function initOF(){
   var ofw=document.createElement('div');ofw.className='ofw on';
   ofw.innerHTML='<div class="ofw-status"><span>17:20</span><span class="rgt">▮▮▮ ▾ ▰</span></div><div class="ofw-scr">'
     +'<div class="ofs" data-s="1" style="display:flex;flex-direction:column;flex:1"><div class="ofw-bar"><span class="bk of-close">‹</span><span class="ttl">Pagar com Pix</span></div><div class="ofw-search">🔍 Busque o seu banco</div><div class="ofw-lbl">Bancos populares</div><div class="ofw-banks">'+banks+'</div><div class="ofw-lbl">Outros</div><div class="ofw-rows">'+rows+'</div><div class="ofw-cta"><div class="ofw-btn dis of-pay1">Selecione um banco</div><div class="ofw-btn ghost">Copiar código Pix</div></div></div>'
-    +'<div class="ofs" data-s="2" style="display:none;flex-direction:column;flex:1"><div class="ofw-bar"><span class="bk of-close">‹</span><span class="ttl">Pagar com Pix</span></div><div class="ofw-card"><div class="hd"><span class="k">ENVIAR PARA</span></div><div class="bd"><div class="mk">💊</div><div><div class="nm">Drogaria Araujo</div><div class="ln">Nome: DROGARIA ARAUJO S.A.</div><div class="ln">CNPJ: 17.590.396/0001-30</div></div></div><div class="hd" style="border-top:1px solid rgba(255,255,255,.06)"><span class="k">PAGANDO COM</span><span class="lnk">Alterar</span></div><div class="bd"><div class="mk of-bmk"></div><div><div class="nm of-bnm"></div><div class="ln">Conta corrente · Open Finance</div></div></div><div class="ofw-tot"><span class="k">Total</span><span class="v">R$ 133,70</span></div></div><div class="ofw-fine">Confirme que o app do seu banco está instalado.</div><div class="ofw-cta" style="margin-top:auto"><div class="ofw-btn of-pay2">Pagar no <span class="of-bnm2"></span></div></div><div class="ofw-pw">Powered by <b>Open Finance</b></div></div>'
+    +'<div class="ofs" data-s="2" style="display:none;flex-direction:column;flex:1"><div class="ofw-bar"><span class="bk of-close">‹</span><span class="ttl">Pagar com Pix</span></div><div class="ofw-card"><div class="hd"><span class="k">ENVIAR PARA</span></div><div class="bd"><div class="mk">💊</div><div><div class="nm">Drogaria Araujo</div><div class="ln">Nome: DROGARIA ARAUJO S.A.</div><div class="ln">CNPJ: 17.590.396/0001-30</div></div></div><div class="hd" style="border-top:1px solid rgba(255,255,255,.06)"><span class="k">PAGANDO COM</span><span class="lnk">Alterar</span></div><div class="bd"><div class="mk of-bmk"></div><div><div class="nm of-bnm"></div><div class="ln">Conta corrente · Open Finance</div></div></div><div class="ofw-tot"><span class="k">Total</span><span class="v">'+fmt(orderTotal())+'</span></div></div><div class="ofw-fine">Confirme que o app do seu banco está instalado.</div><div class="ofw-cta" style="margin-top:auto"><div class="ofw-btn of-pay2">Pagar no <span class="of-bnm2"></span></div></div><div class="ofw-pw">Powered by <b>Open Finance</b></div></div>'
     +'<div class="ofs" data-s="3" style="display:none;flex-direction:column;flex:1"><div class="ofw-splash of-splash"><div class="logo of-bnm3"></div><div class="pill">Usar senha do celular</div></div></div>'
-    +'<div class="ofs" data-s="4" style="display:none;flex-direction:column;flex:1"><div class="ofw-bar"><span class="bk of-close">✕</span></div><div class="ofw-amt"><div class="k">Pagando</div><div class="v">R$ 133,70</div></div><div class="ofw-sec"><div class="st">TITULAR</div><div class="ofw-kv"><span class="k">Nome</span><span class="v">Maria Silva</span></div><div class="ofw-kv"><span class="k">CPF</span><span class="v">•••.412.870-••</span></div><div class="ofw-kv"><span class="k">Tipo</span><span class="v">Pix</span></div><div class="ofw-kv"><span class="k">Quando</span><span class="v">Hoje</span></div><div class="ofw-kv"><span class="k">Iniciado em</span><span class="v">WhatsApp</span></div><div class="st">DESTINO</div><div class="ofw-kv"><span class="k">Nome</span><span class="v">DROGARIA ARAUJO S.A.</span></div></div><div class="ofw-acts"><div class="a pri of-auth">Autorizar</div><div class="a sec of-close">Cancelar</div></div></div>'
+    +'<div class="ofs" data-s="4" style="display:none;flex-direction:column;flex:1"><div class="ofw-bar"><span class="bk of-close">✕</span></div><div class="ofw-amt"><div class="k">Pagando</div><div class="v">'+fmt(orderTotal())+'</div></div><div class="ofw-sec"><div class="st">TITULAR</div><div class="ofw-kv"><span class="k">Nome</span><span class="v">Maria Silva</span></div><div class="ofw-kv"><span class="k">CPF</span><span class="v">•••.412.870-••</span></div><div class="ofw-kv"><span class="k">Tipo</span><span class="v">Pix</span></div><div class="ofw-kv"><span class="k">Quando</span><span class="v">Hoje</span></div><div class="ofw-kv"><span class="k">Iniciado em</span><span class="v">WhatsApp</span></div><div class="st">DESTINO</div><div class="ofw-kv"><span class="k">Nome</span><span class="v">DROGARIA ARAUJO S.A.</span></div></div><div class="ofw-acts"><div class="a pri of-auth">Autorizar</div><div class="a sec of-close">Cancelar</div></div></div>'
     +'<div class="ofs" data-s="5" style="display:none;flex-direction:column;flex:1"><div class="ofw-bar"><span class="bk of-close">‹</span></div><div class="ofw-pin"><h5>Digite sua senha de 4 dígitos</h5><p>Essa é a mesma senha de 4 dígitos do seu cartão.</p><div class="ofw-dots"><i></i><i></i><i></i><i></i></div></div></div>'
     +'<div class="ofs" data-s="6" style="display:none;flex-direction:column;flex:1"><div class="ofw-hop"><div class="ic of-bic"></div><div class="ar">→</div><div class="ic" style="background:#25d366">✆</div></div><div class="ofw-rd"><h5>Redirecionando…</h5><p>Etapa segura via Open Finance.</p><div class="ofw-step s1"><span class="ck g">✓</span>Transferência autorizada</div><div class="ofw-step s2"><span class="ck b">→</span>Voltando para o WhatsApp</div></div><div class="ofw-of">open finance</div></div>'
     +'</div>';
@@ -1504,7 +2007,7 @@ function initOF(){
         ofClose();
         if(!phone.dataset.paid){
           phone.dataset.paid='1';
-          addMsg('Pagamento de <strong>R$ 133,70</strong> confirmado! ✅ Recebemos via Open Finance — sem copiar código nenhum.');
+          addMsg('Pagamento de <strong>'+fmt(orderTotal())+'</strong> confirmado! ✅ Recebemos via Open Finance — sem copiar código nenhum.');
           delay(800).then(function(){addMsg('Seu pedido já está sendo separado. Código: <strong>AR987654321</strong>. Obrigado por comprar na Araujo! 💚');});
         }
         body.scrollTop=body.scrollHeight;
@@ -1515,78 +2018,20 @@ function initOF(){
   paintBank();
 }
 
-/* Start the To Be demo when section is visible */
-var started2=false;
-var sec2=document.getElementById('checkout-mockups');
-if(sec2){
-  new IntersectionObserver(function(es){es.forEach(function(e){
-    if(e.isIntersecting&&!started2){
-      started2=true;
-      delay(400).then(function(){
-        addMsg('<strong>Oi!</strong> Quero comprar o Protetor Solar La Roche-Posay','user');
-        return delay(1300);
-      }).then(function(){
-        addMsg('Ótima escolha! 🌞 Encontrei para você:<br><br>☀️ <strong>La Roche-Posay Anthelios FPS 70</strong><br>💰 R$ 89,90');
-        return delay(1400);
-      }).then(function(){
-        addBtns([{text:'✅ Quero esse!',fn:function(){
-          addMsg('Quero esse!','user');
-          delay(1200).then(function(){
-            addMsg('Excelente! 🛒 E já que você está levando protetor solar, que tal adicionar também?<br><br>💊 <strong>Vitamina D 2000 UI</strong> — R$ 34,90<br><em>Complemento perfeito para quem se protege do sol!</em>');
-            return delay(600);
-          }).then(function(){
-            addBtns([
-              {text:'👍 Adicionar ao carrinho',fn:function(){
-                addMsg('Adicionar ao carrinho!','user');
-                delay(1000).then(function(){
-                  addMsg('Adicionado! 🛒<br>Agora preciso de algumas informações para finalizar. Clique abaixo para preencher rapidinho:');
-                  return delay(600);
-                }).then(function(){
-                  addBtns([{text:'📋 Informar dados de entrega',fn:function(){
-                    this.closest&&this.closest('.wa-btn-row')&&(this.closest('.wa-btn-row').style.pointerEvents='none');
-                    openFlow();
-                  }}]);
-                });
-              }},
-              {text:'Não, obrigado',fn:function(){
-                addMsg('Não, obrigado','user');
-                delay(1000).then(function(){
-                  addMsg('Sem problema! Preciso de algumas informações para finalizar. Clique abaixo:');
-                  return delay(600);
-                }).then(function(){
-                  addBtns([{text:'📋 Informar dados de entrega',fn:function(){openFlow();}}]);
-                });
-              }}
-            ]);
-          });
-        }}]);
-      });
-    }
-  });},{root:document.getElementById('scroller'),threshold:.25}).observe(sec2);
-}
-
-/* Replay button */
-var rp=document.getElementById('tobeReplay');
-if(rp) rp.addEventListener('click',function(){
-  delete phone.dataset.paid;
-  var existingOfw=phone.querySelector('.ofw');
-  if(existingOfw) existingOfw.remove();
-  body.innerHTML='<div class="wa-date-chip">Hoje</div>';
-  started2=false;
-  timers.forEach(clearTimeout);timers=[];
-  /* re-trigger */
-  started2=true;
+/* Sequência completa da demo To Be — reaproveitada no start e no replay */
+function runToBeDemo(){
   delay(400).then(function(){
-    addMsg('<strong>Oi!</strong> Quero comprar o Protetor Solar La Roche-Posay','user');
+    addMsg('<strong>Oi!</strong> Quero comprar um protetor solar','user');
     return delay(1300);
   }).then(function(){
-    addMsg('Ótima escolha! 🌞 Encontrei para você:<br><br>☀️ <strong>La Roche-Posay Anthelios FPS 70</strong><br>💰 R$ 89,90');
-    return delay(1400);
+    addMsg('Claro! 🌞 Encontrei algumas opções ótimas para você. Dá uma olhada:');
+    return delay(500);
   }).then(function(){
-    addBtns([{text:'✅ Quero esse!',fn:function(){
-      addMsg('Quero esse!','user');
+    addCarousel(SUN_PRODUCTS,function(p){
+      chosen=p;
+      addMsg(p.emoji+' '+p.name+' — '+fmt(p.price),'user');
       delay(1200).then(function(){
-        addMsg('Excelente! 🛒 E já que você está levando protetor solar, que tal adicionar também?<br><br>💊 <strong>Vitamina D 2000 UI</strong> — R$ 34,90<br><em>Complemento perfeito para quem se protege do sol!</em>');
+        addMsg('Excelente escolha! 🛒 E já que você está levando protetor solar, que tal adicionar também?<br><br>💊 <strong>Vitamina D 2000 UI</strong> — R$ 34,90<br><em>Complemento perfeito para quem se protege do sol!</em>');
         return delay(600);
       }).then(function(){
         addBtns([
@@ -1610,8 +2055,159 @@ if(rp) rp.addEventListener('click',function(){
           }}
         ]);
       });
-    }}]);
+    });
   });
+}
+
+/* Start the To Be demo when section is visible */
+var started2=false;
+var sec2=document.getElementById('checkout-mockups');
+if(sec2){
+  new IntersectionObserver(function(es){es.forEach(function(e){
+    if(e.isIntersecting&&!started2){
+      started2=true;
+      runToBeDemo();
+    }
+  });},{root:document.getElementById('scroller'),threshold:.25}).observe(sec2);
+}
+
+/* Replay button */
+var rp=document.getElementById('tobeReplay');
+if(rp) rp.addEventListener('click',function(){
+  delete phone.dataset.paid;
+  var existingOfw=phone.querySelector('.ofw');
+  if(existingOfw) existingOfw.remove();
+  body.innerHTML='<div class="wa-date-chip">Hoje</div>';
+  started2=false;
+  timers.forEach(clearTimeout);timers=[];
+  started2=true;
+  runToBeDemo();
+});
+})();
+
+/* ===== CARRINHO ABANDONADO · recuperação proativa ===== */
+(function(){
+"use strict";
+var body=document.getElementById('cartBody');
+var phone=document.getElementById('cartPhone');
+if(!body||!phone) return;
+var timers=[];
+function later(fn,ms){timers.push(setTimeout(fn,ms));}
+function delay(ms){return new Promise(function(r){later(r,ms)});}
+function addMsg(html,type,time){
+  var d=document.createElement('div');
+  d.className='msg '+(type==='user'?'msg-out':'msg-in');
+  d.innerHTML=html+'<span class="msg-time">'+(time||(type==='user'?'09:14 ✓✓':'09:14'))+'</span>';
+  d.style.opacity='0';d.style.transform='translateY(6px)';
+  body.appendChild(d);
+  requestAnimationFrame(function(){d.style.transition='all .3s';d.style.opacity='1';d.style.transform='none';});
+  body.scrollTop=body.scrollHeight;
+  return d;
+}
+function addSys(txt){
+  var d=document.createElement('div');d.className='msg-sys';d.textContent=txt;
+  d.style.opacity='0';body.appendChild(d);
+  requestAnimationFrame(function(){d.style.transition='opacity .3s';d.style.opacity='1';});
+  body.scrollTop=body.scrollHeight;
+}
+function addBtns(btns){
+  var wrap=document.createElement('div');wrap.className='wa-btn-row';wrap.style.opacity='0';wrap.style.transform='translateY(6px)';
+  var bw=document.createElement('div');bw.className='wa-btns';
+  btns.forEach(function(b){
+    var btn=document.createElement('button');btn.className='wa-btn';btn.textContent=b.text;
+    btn.addEventListener('click',function(){wrap.style.pointerEvents='none';wrap.style.opacity='.4';b.fn();});
+    bw.appendChild(btn);
+  });
+  wrap.appendChild(bw);body.appendChild(wrap);
+  requestAnimationFrame(function(){wrap.style.transition='all .3s';wrap.style.opacity='1';wrap.style.transform='none';});
+  body.scrollTop=body.scrollHeight;
+}
+function runCartDemo(){
+  addSys('Ontem · 18:42');
+  delay(300).then(function(){
+    addMsg('Quero comprar o Protetor Solar La Roche-Posay Anthelios FPS 70','user','18:42 ✓✓');
+    return delay(1100);
+  }).then(function(){
+    addMsg('Boa escolha! ☀️ <strong>La Roche-Posay Anthelios FPS 70</strong> — R$ 89,90<br><br>Confirma que você quer esse?','','18:42');
+    return delay(1200);
+  }).then(function(){
+    addMsg('Sim, quero esse mesmo','user','18:43 ✓✓');
+    return delay(1000);
+  }).then(function(){
+    addMsg('🛒 Adicionado ao carrinho! Quando quiser, é só me chamar para finalizarmos o pagamento.','','18:43');
+    return delay(1900);
+  }).then(function(){
+    var d=document.createElement('div');d.className='msg-sys';d.style.fontStyle='italic';d.textContent='⏳ Conversa encerrada sem finalizar a compra';
+    d.style.opacity='0';body.appendChild(d);
+    requestAnimationFrame(function(){d.style.transition='opacity .3s';d.style.opacity='1';});
+    body.scrollTop=body.scrollHeight;
+    return delay(1300);
+  }).then(function(){
+    addSys('Hoje · 09:14');
+    return delay(500);
+  }).then(function(){
+    addMsg('Oi','user','09:14 ✓✓');
+    return delay(1400);
+  }).then(function(){
+    addMsg('Oi de novo! 😊 Vi que você tinha deixado no carrinho:<br><br>☀️ <strong>La Roche-Posay Anthelios FPS 70</strong> — R$ 89,90<br><br>Quer continuar de onde parou?','','09:14');
+    return delay(700);
+  }).then(function(){
+    addBtns([
+      {text:'✅ Sim, continuar compra',fn:function(){
+        addMsg('Sim, continuar compra','user','09:15 ✓✓');
+        delay(1200).then(function(){
+          addMsg('Perfeito! 🛒 E já que você está levando protetor solar, que tal adicionar também?<br><br>💊 <strong>Vitamina D 2000 UI</strong> — R$ 34,90<br><em>Complemento perfeito para quem se protege do sol!</em>');
+          return delay(600);
+        }).then(function(){
+          addBtns([
+            {text:'👍 Adicionar ao carrinho',fn:function(){
+              addMsg('Adicionar ao carrinho!','user','09:15 ✓✓');
+              delay(1000).then(function(){
+                addMsg('Adicionado! 🛒<br>Agora preciso de algumas informações para finalizar. Clique abaixo para preencher rapidinho:');
+                return delay(600);
+              }).then(function(){
+                addBtns([{text:'📋 Informar dados de entrega',fn:function(){
+                  addMsg('📋 Dados enviados via formulário','user','09:16 ✓✓');
+                  delay(1200).then(function(){
+                    addMsg('Perfeito! Seus dados foram recebidos ✅<br><br>Resumo do pedido:<br>☀️ Anthelios FPS 70 — R$ 89,90<br>💊 Vitamina D — R$ 34,90<br>🚚 Frete — R$ 8,90<br><br><strong>Total: R$ 133,70</strong><br><br>Como você quer pagar?');
+                    return delay(700);
+                  }).then(function(){
+                    addBtns([{text:'💠 Pix Copia e Cola',fn:function(){
+                      addMsg('Pix Copia e Cola','user','09:16 ✓✓');
+                      delay(1000).then(function(){
+                        addMsg('Aqui está sua chave PIX ⏱️ Válida por 15 minutos:<span class="pix">00020126580014BR.GOV.BCB.PIX0136araujo-pay-8f21ab...5204000053039865406133.705802BR5913DROGARAUJO6009SAOPAULO62070503***6304C3D4<span class="cop">⧉ Copiar código</span></span>');
+                        return delay(900);
+                      }).then(function(){
+                        addBtns([{text:'✅ Simular pagamento',fn:function(){
+                          addMsg('Pagamento realizado','user','09:17 ✓✓');
+                          delay(1200).then(function(){
+                            addMsg('🎉 Pagamento confirmado! Que bom te ver de volta 💚<br><br>Seu pedido já está sendo separado. Código de rastreio: <strong>AR564213987</strong>.');
+                          });
+                        }}]);
+                      });
+                    }}]);
+                  });
+                }}]);
+              });
+            }}
+          ]);
+        });
+      }}
+    ]);
+  });
+}
+var started3=false;
+var sec3=document.getElementById('checkout-mockups');
+if(sec3){
+  new IntersectionObserver(function(es){es.forEach(function(e){
+    if(e.isIntersecting&&!started3){started3=true;runCartDemo();}
+  });},{root:document.getElementById('scroller'),threshold:.25}).observe(sec3);
+}
+var rp3=document.getElementById('cartReplay');
+if(rp3) rp3.addEventListener('click',function(){
+  body.innerHTML='';
+  timers.forEach(clearTimeout);timers=[];
+  runCartDemo();
 });
 })();
 </script>
